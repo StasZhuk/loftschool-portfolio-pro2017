@@ -1,8 +1,37 @@
-block variables
+include common/_mixins
 
+block variables
+  - var pages {'Мои работы' : '/pages/works.html', 'Блог' : '/pages/blog.html', 'Обо мне' : '/pages/about.html', 'Авторизация' : '/pages/auth.html'}
 doctype html
 html
   include common/_generals
 
+
   body
     block content
+      header.header
+        .header__top
+          .socials
+          
+          .header__nav
+            .header__burger
+              .burger
+                span.burger__line
+            nav.nav
+              ul.nav__list
+                each href, title in {'Мои работы': '/pages/works.html', 'Блог': '/pages/blog.html', 'Обо мне': '/pages/about.html', 'Авторизация': '/pages/auth.html'}
+                  li.nav__list-item
+                    a(href= href).nav__list-link= title
+
+          .header__center
+            .user
+              .user__wrap-img
+                img(alt="image" src="../img/user-img_small.png").user__img
+              block user__desc
+          .header__triangle
+            .triangle
+        block header__bottom-heading
+
+
+          
+

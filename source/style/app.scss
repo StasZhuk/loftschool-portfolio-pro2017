@@ -1,7 +1,16 @@
 @import 'base/vars';
 @import 'base/fonts';
+
+// layout
 @import 'layout/smart-grid';
+
+// base style
 @import 'base/adjustments';
+
+// commons
+@import 'common/header';
+
+
 
 body {
   margin: 0;

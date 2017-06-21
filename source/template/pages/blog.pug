@@ -1,7 +1,12 @@
 extends ../_template
 
 block source
-  - var url_js = '/assets/js/blog.js'
+  - var url_js = 'blog.js'
 
 block variables
   - var title = 'Blog page'
+
+block header__bottom-heading
+  .header__bottom-wrap
+    h1.heading__h1 
+      | Блог

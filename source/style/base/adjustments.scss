@@ -1,15 +1,28 @@
-body, html {
+body,
+html {
     height: 100%;
     width: 100%;
 }
 
 html {
     box-sizing: border-box;
+    font-size: $text-size_main;
+    font-family: "robotoregular", sans-serif;
+    color: $text-color_main;
 }
+
 *,
 *::after,
 *::before {
     box-sizing: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     margin: 0;
     padding: 0;
 }
@@ -17,4 +30,19 @@ html {
 ul,
 ol {
     list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.heading__h1,
+.heading__h2 {
+    font-family: 'Sansus', sans-serif;
+    color: $text-color_main;
+    text-transform: uppercase;
+}
+
+.heading__h1 {
+    font-size: $text-size_h1;
 }
