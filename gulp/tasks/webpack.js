@@ -8,7 +8,7 @@ module.exports = function() {
                 index: $.path.source + '/js/index.js',
                 auth: $.path.source + '/js/pages/auth.js',
                 about: $.path.source + '/js/pages/about.js',
-                portfolio: $.path.source + '/js/pages/works.js',
+                works: $.path.source + '/js/pages/works.js',
                 blog: $.path.source + '/js/pages/blog.js'
             },
             output: {
