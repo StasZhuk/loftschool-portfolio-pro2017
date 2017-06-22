@@ -13,24 +13,25 @@ html
 
         header.header
           .header__top
-            .header__top-menu.clearfix
-              .socials
-                ul.social__list.list
-                  each href, item in {'vk' : '../assets/img/sprite/sprite.svg#vk', 'skype': '../assets/img/sprite/sprite.svg#skype' , 'git': '../assets/img/sprite/sprite.svg#github'}
-                    li.list__item.social__list-item
-                      a(href='#').list__link.social__list-link
-                        svg.icon
-                          use(xlink:href= href)
+            .header__top-menu
+              .container.clearfix
+                .socials
+                  ul.social__list.list
+                    each href, item in {'vk' : '../assets/img/sprite/sprite.svg#vk', 'skype': '../assets/img/sprite/sprite.svg#skype' , 'git': '../assets/img/sprite/sprite.svg#github'}
+                      li.list__item.social__list-item
+                        a(href='#').list__link.social__list-link
+                          svg.icon
+                            use(xlink:href= href)
 
-              .header__nav
-                .header__burger
-                  .burger
-                    span.burger__line
-                nav.nav
-                  ul.nav__list.list
-                    each href, title in {'Мои работы': '/pages/works.html', 'Блог': '/pages/blog.html', 'Обо мне': '/pages/about.html', 'Авторизация': '/pages/auth.html'}
-                      li.nav__list-item.list__item
-                        a(href= href).nav__list-link= title
+                .header__nav
+                  .header__burger
+                    .burger
+                      span.burger__line
+                  nav.nav
+                    ul.nav__list.list
+                      each href, title in {'Мои работы': '/pages/works.html', 'Блог': '/pages/blog.html', 'Обо мне': '/pages/about.html', 'Авторизация': '/pages/auth.html'}
+                        li.nav__list-item.list__item
+                          a(href= href).nav__list-link= title
 
             .header__center
               .stars__bg-wrap
