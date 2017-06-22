@@ -3,17 +3,14 @@
 
 // layout
 @import 'layout/smart-grid';
+@import 'layout/grid';
 
 // base style
 @import 'base/adjustments';
 
 // commons
+@import 'common/elements';
 @import 'common/header';
 
 
-
-body {
-  margin: 0;
-}
-
-@import 'common/greating';
+@import 'common/footer';

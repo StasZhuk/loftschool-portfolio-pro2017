@@ -1,7 +1,72 @@
 .header {
+    display: flex;
+    overflow: hidden;
+    color: $white;
+    flex-direction: column;
     width: 100%;
-    background: #18325f url(../img/header/header_bg.jpg) no-repeat center 60%;
+    text-align: center;
+    background: #18325f url(../img/header/header_bg.jpg) no-repeat center 80%;
+    .socials {
+        float: left;
+        left: 10px;
+        top: 30px;
+    }
+
 }
+
 .header__top {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     height: 100vh;
+}
+
+.header__top-menu {
+    padding-top: 30px;
+    padding-left: 10px;
+    padding-right: 30px;
+}
+
+.header__nav {
+    float: right;
+}
+
+.social__list {
+    justify-content: space-around;
+}
+
+.header__center {
+    position: relative;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.header__triangle {
+    height: 100px;
+}
+
+.user__img {
+    max-width: 100%;
+    max-height: 100%;
+} 
+
+.header__bottom-wrap {
+    position: relative;
+    width: 100%;
+    padding: 50px 0;
+    background-color: $bg_black-opacity;
+}
+
+.header__bottom-heading--blog {
+    position: absolute;
+    bottom: 0;
+    background-color: transparent;
+}
+.stars__bg-wrap {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
 }
