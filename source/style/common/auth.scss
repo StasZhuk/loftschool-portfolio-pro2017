@@ -6,27 +6,25 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between; 
-    background: $acsent url('../img/auth/auth_bg.jpg') no-repeat center;
+    background: #10264F url('../img/auth/auth_bg.jpg') no-repeat center;
     background-size: cover;
     .socials {
         margin-top: 30px;
         margin-bottom: 40px;
     }
-    .heading__h2 {
-        margin-bottom: 5px;
-    }
+
+    .user {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(28, 31, 41, 0.5);
+    padding-top: 40px;
+  }
 }
 
 .auth__wrap {
     margin-left: auto;
 }
 
-.user {
-    display: flex;
-    flex-direction: column;
-    background-color: rgba(28, 31, 41, 0.5);
-    padding-top: 40px;
-}
 
 .auth__nav-list {
     display: flex;
@@ -40,9 +38,14 @@
     flex: 1;
     background-color: $acsent;
     border-right: 1px solid #dee3e7;
+    transition: background-color 0.3s; 
+    &:hover {
+        background-color: $acsent-hov;
+    }
 }
 
 .auth__nav-link {
+    font-family: "robotomedium", sans-serif;
     display: block;
     padding: 10px 0;
     color: $white;

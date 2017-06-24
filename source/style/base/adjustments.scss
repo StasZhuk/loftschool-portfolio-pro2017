@@ -68,8 +68,11 @@ svg {
     height: 36px;
     line-height: 36px;
     vertical-align: middle;
-    padding: 5px;
     fill: $white;
+    transition: fill 0.3s;
+    &:hover {
+        fill: $acsent;
+    }
 }
 
 .list {

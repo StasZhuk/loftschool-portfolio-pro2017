@@ -36,7 +36,7 @@
     }
 }
 
-// triangle element
+// header triangle element
 .triangle {
   width: 100%;
   height: 100%;
@@ -64,23 +64,28 @@
   z-index: 2;
   color: $white;
   text-align: center;
-      .user__wrap-img {
-        width: 140px;
-        height: 140px;
-        margin: 0 auto;
-        overflow: hidden;
-        border-radius: 50%;
-        margin-bottom: 20px;
-    }
+  .user__wrap-img {
+    width: 140px;
+    height: 140px;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 50%;
+    margin-bottom: 20px;
+  }
+  .heading__h2 {
+    margin-bottom: 5px;
+  }
 }
 
 .stars use{
   opacity: 0.15;
 }
 
-// btn
+// button
 .btn {
+    display: block;
     width: 180px;
+    max-width: 180px;
     height: 45px;
     line-height: 45px;
     text-align: center;
@@ -91,4 +96,3 @@
     margin-right: 20px;
     cursor: pointer;
 }
-
