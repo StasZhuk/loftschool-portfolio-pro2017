@@ -1,5 +1,6 @@
 // socials icon-list
 .socials {
+    margin: 0 auto;
     width: 180px;
     a {
         display: block;
@@ -58,8 +59,11 @@
 }
 .user {
   position: relative;
+  max-width: 380px;
+  margin: 0 auto;
   z-index: 2;
   color: $white;
+  text-align: center;
       .user__wrap-img {
         width: 140px;
         height: 140px;
@@ -72,5 +76,19 @@
 
 .stars use{
   opacity: 0.15;
+}
+
+// btn
+.btn {
+    width: 180px;
+    height: 45px;
+    line-height: 45px;
+    text-align: center;
+    color: $white;
+    border: 1px solid $white;
+    border-radius: 2px;
+    margin-top: 25px;
+    margin-right: 20px;
+    cursor: pointer;
 }
 

@@ -1,0 +1,41 @@
+html
+  include common/_generals
+  body.auth
+  block source
+    - var url_js= 'index.js'
+    
+  block variables
+    - var title= 'Index page'
+
+    .auth__wrap
+      .btn.btn__auth
+        | Авторизация
+    .user__wrap
+      .user
+        .user__wrap-img
+          img(alt="image" src="/assets/img/header/logo_user.jpg").user__img
+        h2.heading__h2 
+          | Станислав Жуковский
+        span.user__prof
+          | Личный сайт веб разработчика
+        .socials
+          ul.social__list.list
+            each href, item in {'vk' : '../assets/img/sprite/sprite.svg#vk', 'skype': '../assets/img/sprite/sprite.svg#skype' , 'git': '../assets/img/sprite/sprite.svg#github'}
+              li.list__item.social__list-item
+                a(href='#').list__link.social__list-link
+                  svg.icon
+                    use(xlink:href= href)
+        .auth__nav
+          ul.auth__nav-list
+            li.auth__nav-item
+              a(href='./pages/works.html').auth__nav-link
+                | Мои работы
+            li.auth__nav-item
+              a(href='./pages/about.html').auth__nav-link
+                | Обо мне
+            li.auth__nav-item
+              a(href='./pages/blog.html').auth__nav-link
+                | Блог
+    .copyr__wrap
+      .copyr
+        | © Жуковский Станислав | создано с любовью в LoftSchool | 2017
