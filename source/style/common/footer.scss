@@ -1,4 +1,5 @@
 .footer {
+    font-family: 'robotolight', sans-serif;
     line-height: 24px;
     width: 100%;
     color: $white;
@@ -22,6 +23,9 @@
             color: $acsent;
         }
     }
+    .col__wrap {
+        margin-top: 15px;
+    }
 }
 .footer__center {
     display: flex;
@@ -34,4 +38,11 @@
     height: 100%;
     flex-direction: column;
     justify-content: space-between;
+}
+.footer__bottom {
+    text-align: center;
+}
+
+.bg--blue {
+    background-color: rgba($acsent, 0.5);
 }
