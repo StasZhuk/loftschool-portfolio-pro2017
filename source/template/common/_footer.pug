@@ -2,18 +2,33 @@ footer.footer
     .container
         .row
             .col__wrap.col__4
-                .footer__left
-                    p
-                    | Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. 
+                .footer__left.text--light
+                    p Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. 
             .col__wrap.col__5
                 .footer__center
-                    p
-                    | Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. 
+                    nav.nav
+                      ul.nav__list.list
+                          each href, title in {'Мои работы': '/pages/works.html', 'Блог': '/pages/blog.html', 'Обо мне': '/pages/about.html', 'Авторизация': '/pages/auth.html'}
+                            li.nav__list-item.list__item
+                                a(href= href).nav__list-link.text--medium= title 
+                    .socials
+                         ul.social__list.list
+                            each href, item in {'vk' : '../assets/img/sprite/sprite.svg#vk', 'skype': '../assets/img/sprite/sprite.svg#skype' , 'git': '../assets/img/sprite/sprite.svg#github'}
+                                li.list__item.social__list-item
+                                    a(href='#').list__link.social__list-link
+                                        svg.icon
+                                            use(xlink:href= href)
             .col__wrap.col__3
-                .footer__right
-                    p
-                    | Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. 
+                .footer__right.text--light
+                    a(href="#")
+                        | skype_ylitylia
+                    a(href="mailto:menistrel2005@yandex.ru")
+                        | menistrel2005@yandex.ru
+                    a(href="tel:+79877897889") 
+                        | +7 987 789 78 89
+                    a(href="#") 
+                        | Москва
             .col__wrap.col__12
                 .footer__bottom
                     p
-                    | Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. 
+                        | Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. 

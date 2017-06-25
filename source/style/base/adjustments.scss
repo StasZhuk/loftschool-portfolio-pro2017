@@ -27,7 +27,8 @@ h4,
 h5,
 h6,
 ul,
-ol {
+ol,
+p {
     margin: 0;
     padding: 0;
 }
@@ -38,6 +39,7 @@ ol {
 }
 
 a {
+    color: $white;
     text-decoration: none;
 }
 
@@ -58,6 +60,13 @@ a {
     font-size: $text-size_h2;
     font-weight: normal;
 }
+.text--light {
+    font-family: 'robotolight', sans-serif;
+}
+.text--medium {
+    font-family: 'robotomedium', sans-serif;
+}
+
 svg {
     width: 100%;
     height: 100%;

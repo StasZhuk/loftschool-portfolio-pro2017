@@ -1,5 +1,37 @@
 .footer {
+    line-height: 24px;
     width: 100%;
     color: $white;
     background-color: $bg_black-opacity;
+    .socials{
+        width: 150px;
+        margin-left: 0;
+    }
+    .social__list {
+        justify-content: space-between;
+    }
+    .icon {
+        fill: rgba($white, 0.5);
+        &:hover {
+            fill: $acsent;
+        }
+    }
+    .nav__list-link { 
+        transition: color 0.3s;
+        &:hover {
+            color: $acsent;
+        }
+    }
+}
+.footer__center {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.footer__right {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-between;
 }
