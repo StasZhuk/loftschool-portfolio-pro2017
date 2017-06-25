@@ -96,3 +96,19 @@
     margin-right: 20px;
     cursor: pointer;
 }
+
+// social icons 
+
+
+.icon {
+    display: inline-block;
+    width: 26px;
+    height: 26px;
+    line-height: 36px;
+    vertical-align: middle;
+    fill: $white;
+    transition: fill 0.3s;
+    &:hover {
+        fill: $acsent;
+    }
+}

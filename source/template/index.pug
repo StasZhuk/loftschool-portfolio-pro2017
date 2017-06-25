@@ -1,12 +1,11 @@
 html
   include common/_generals
-  body.auth
   block source
     - var url_js= 'index.js'
     
-  block variables
+  block title
     - var title= 'Index page'
-
+  body.auth
     .auth__wrap
       .btn.btn__auth
         | Авторизация
