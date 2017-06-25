@@ -1,0 +1,27 @@
+// user block
+.details__wrap {
+  max-width: 500px;
+  text-align: center;
+  margin: 0 auto;
+  background: transparent url() no-repeat center;
+  background-position: round;
+}
+.user {
+  position: relative;
+  max-width: 380px;
+  margin: 0 auto;
+  z-index: 2;
+  color: $white;
+  text-align: center;
+  .user__wrap-img {
+    width: 140px;
+    height: 140px;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 50%;
+    margin-bottom: 20px;
+  }
+  .heading__h2 {
+    margin-bottom: 5px;
+  }
+}

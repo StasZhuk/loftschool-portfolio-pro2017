@@ -71,3 +71,14 @@
     right: 0;
     left: 0;
 }
+
+.header__arrow-wrap {
+    position: absolute;
+    width: 20px;
+    left: 50%;
+    bottom: 250px;
+    transform: translateX(-50%);
+    svg {
+        fill: rgba($white, 0.7);
+    }
+}
