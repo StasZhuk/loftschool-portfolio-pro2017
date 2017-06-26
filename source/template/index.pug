@@ -11,19 +11,20 @@ html
         | Авторизация
     .user__wrap
       .user
-        .user__wrap-img
-          img(alt="image" src="/assets/img/header/logo_user.jpg").user__img
-        h2.heading__h2 
-          | Станислав Жуковский
-        span.user__prof
-          | Личный сайт веб разработчика
-        .socials
-          ul.social__list.list
-            each href, item in {'vk' : '../assets/img/sprite/sprite.svg#vk', 'skype': '../assets/img/sprite/sprite.svg#skype' , 'git': '../assets/img/sprite/sprite.svg#github'}
-              li.list__item.social__list-item
-                a(href='#').list__link.social__list-link
-                  svg.icon
-                    use(xlink:href= href)
+        .user__block__info
+          .user__wrap-img
+            img(alt="image" src="/assets/img/header/logo_user.jpg").user__img
+          h2.heading__h2 
+            | Станислав Жуковский
+          span.user__prof
+            | Личный сайт веб разработчика
+          .socials
+            ul.social__list.list
+              each href, item in {'vk' : '../assets/img/sprite/sprite.svg#vk', 'skype': '../assets/img/sprite/sprite.svg#skype' , 'git': '../assets/img/sprite/sprite.svg#github'}
+                li.list__item.social__list-item
+                  a(href='#').list__link.social__list-link
+                    svg.icon
+                      use(xlink:href= href)
         .auth__nav
           ul.auth__nav-list
             li.auth__nav-item

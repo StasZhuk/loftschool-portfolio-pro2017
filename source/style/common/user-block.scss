@@ -6,13 +6,18 @@
   background: transparent url() no-repeat center;
   background-position: round;
 }
+.user__wrap {
+  display: inline-block;
+  margin: 0 auto;
+}
 .user {
   position: relative;
-  max-width: 380px;
-  margin: 0 auto;
   z-index: 2;
   color: $white;
   text-align: center;
+  .user__block__info {
+    padding: 0 30px;
+  }
   .user__wrap-img {
     width: 140px;
     height: 140px;

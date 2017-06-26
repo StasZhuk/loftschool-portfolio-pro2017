@@ -18,6 +18,7 @@
         }
     }
     .nav__list-link { 
+        padding: 0 5px;
         transition: color 0.3s;
         &:hover {
             color: $acsent;
