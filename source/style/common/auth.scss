@@ -2,7 +2,6 @@
     color: $white;
     width: 100vw;
     height: 100vh;
-    overflow: hidden;
     display: flex;
     flex-direction: column;
     justify-content: space-between; 
@@ -23,13 +22,22 @@
 
 .auth__wrap {
     margin-left: auto;
+    margin-top: 20px;
+    margin-right: 20px;
 }
 
 
 .auth__nav-list {
     display: flex;
     width: 100%;
+    li:first-child {
+        flex-grow: 1.8;
+    }
+    li:nth-child(2) {
+        flex-grow: 1.4;
+    }
     li:last-child {
+        flex-grow: 1;
         border-right: none;
     }
 }

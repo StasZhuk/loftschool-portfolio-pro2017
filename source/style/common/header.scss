@@ -43,7 +43,7 @@
 }
 
 .header__triangle {
-    height: 100px;
+    height: 110px;
 }
 
 .user__img {
@@ -81,4 +81,7 @@
     svg {
         fill: rgba($white, 0.7);
     }
+}
+.header__about--arrow {
+    bottom: 80px;
 }

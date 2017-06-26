@@ -17,8 +17,10 @@
             fill: $acsent;
         }
     }
+    .nav__list-item {
+        margin-right: 10px;
+    }
     .nav__list-link { 
-        padding: 0 5px;
         transition: color 0.3s;
         &:hover {
             color: $acsent;
@@ -26,6 +28,9 @@
     }
     .nav__list {
         flex-wrap: wrap;
+        li:last-child {
+            margin-right: 0;
+        }
     }
 
 }
