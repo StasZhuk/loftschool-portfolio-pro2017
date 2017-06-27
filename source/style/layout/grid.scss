@@ -1,10 +1,10 @@
 .container {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
+    position: relative;
+    @include wrapper();
+    overflow: hidden;
 }
 .row {
-    display: flex;
+    @include row-flex();
     flex-wrap: wrap;
 }
 .col__wrap {

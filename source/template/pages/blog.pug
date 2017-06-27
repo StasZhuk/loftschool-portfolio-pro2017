@@ -12,3 +12,13 @@ block header__bottom-heading
       | Блог
     .header__blog-desc
       | Статьи, которые я написал
+
+block triangle
+  .header__triangle.header__triangle--white
+    .triangle
+      svg(class="rectangle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none")
+          polygon.triangle__left(points="0 0, 0 100, 50 100")
+          polygon.triangle__right(points="100 0, 100 100, 50 100")
+
+block content
+  .container.blog

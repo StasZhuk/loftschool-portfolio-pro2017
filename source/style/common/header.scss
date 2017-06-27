@@ -15,6 +15,7 @@
 }
 
 .header__top {
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -36,10 +37,12 @@
 }
 
 .header__center {
-    position: relative;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     text-align: center;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding: 20px 50px;
 }
 
 .header__triangle {
@@ -56,6 +59,7 @@
     width: 100%;
     padding: 50px 0;
     background-color: $bg_black-opacity;
+    text-align: center;
 }
 
 .header__bottom-heading--blog {
@@ -76,7 +80,7 @@
     position: absolute;
     width: 20px;
     left: 50%;
-    bottom: 250px;
+    bottom: 80px;
     transform: translateX(-50%);
     svg {
         fill: rgba($white, 0.7);

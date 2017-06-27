@@ -10,3 +10,12 @@
   fill: $bg_black-opacity;
   }
 }
+
+.header__triangle.header__triangle--white {
+    .triangle__left {
+        fill: $content-left_bg;
+    } 
+    .triangle__right {
+        fill: $content-right_bg;
+    } 
+}

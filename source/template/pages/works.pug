@@ -17,7 +17,12 @@ block arrow__down
       svg(viewbox="0 0 100 100")
         use(xlink:href="../assets/img/sprite/sprite.svg#arrow_down")
 
-
+block triangle
+  .header__triangle
+    .triangle
+      svg(class="rectangle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none")
+          polygon.triangle__left(points="0 0, 0 100, 50 100")
+          polygon.triangle__right(points="100 0, 100 100, 50 100")
 
 block header__bottom-heading
   .header__bottom-wrap
@@ -26,3 +31,6 @@ block header__bottom-heading
         use(xlink:href='../assets/img/sprite/sprite.svg#stars_1')
     h1.heading__h1 
       | Мои работы  
+
+block content
+  .container.works

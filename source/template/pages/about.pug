@@ -17,3 +17,50 @@ block arrow__down
     a(href="#")
       svg(viewbox="0 0 100 100")
         use(xlink:href="../assets/img/sprite/sprite.svg#arrow_down")
+
+block triangle
+  .header__triangle.header__triangle--white
+    .triangle
+      svg(class="rectangle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none")
+          polygon.triangle__left(points="0 0, 0 100, 50 100")
+          polygon.triangle__right(points="100 0, 100 100, 50 100")
+
+block content
+  .body__bg-left
+  .body__bg-right
+  .container.about
+    .row
+      .about__left
+          .header__bottom-wrap
+            .stars__bg-wrap
+              svg.stars
+                use(xlink:href='../assets/img/sprite/sprite.svg#stars_1')
+            h1.heading__h1 
+              | Обо мне 
+          .user-img-big__wrap
+            .user-img-big
+              img(src="../assets/img/about/user-img.jpg")
+          .heading__h2-wrap
+            h2.heading__h2
+              | Кто я
+          .about__left-desc.desc__wrap
+            p 
+              | Я веб разработчик из Новосибирска. Мне 27 лет. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
+            p
+              | Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
+      .about__right
+          .heading__h2-wrap
+            h2.heading__h2
+              | Чем я могу быть вам полезен
+          .about__right-desc.desc__wrap
+            p 
+              | Больше всего меня привлекет Frontend разработка, но я также знаком и могу решать не сложные задачи на Backend. Но давайте по порядку.
+          .circle__wrap
+            include ../common/_circles 
+  .map__wrap
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d574855.8439234569!2d37.07068979893654!3d55.749283717319386!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54afc73d4b0c9%3A0x3d44d6cc5757cf4c!2z0JzQvtGB0LrQstCw!5e0!3m2!1sru!2sru!4v1498593606752" width="800" height="600" frameborder="0" style="border:0" allowfullscreen></iframe>
+      
+
+
+
+          
