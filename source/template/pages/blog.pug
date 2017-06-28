@@ -14,11 +14,62 @@ block header__bottom-heading
       | Статьи, которые я написал
 
 block triangle
-  .header__triangle.header__triangle--white
+  .header__triangle.header__triangle--blog
     .triangle
       svg(class="rectangle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none")
           polygon.triangle__left(points="0 0, 0 100, 50 100")
           polygon.triangle__right(points="100 0, 100 100, 50 100")
 
 block content
-  .container.blog
+  .blog__wrap
+    .container.blog
+      .row
+        .blog__left
+          .blog__tabs
+            span.blog__tab.active
+              | Самое важное в SASS
+            span.blog__tab
+              | Приёмы в вёрстке, без которых не обходится ни один сайт
+            span.blog__tab 
+              | Самый необходимый набор Gulp плагинов
+            span.blog__tab 
+              | Почему я выбрал Jade
+        .blog__right    
+          .blog__tab-content
+            .blog__tab-item
+              articles.post
+                h2.heading__h2.post__heading
+                  | Самое важное в SASS
+                .date__wrap
+                  time(datetime="2016-11-22").post__date
+                    | 22 ноября 2016
+                .post__desc
+                  p  
+                    | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis ab iure officia aliquam, odit quibusdam facilis voluptate neque impedit quod.
+                  p
+                    | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae quasi voluptas quaerat rerum neque. Quidem commodi adipisci culpa inventore. Dolores enim perferendis deserunt at commodi ipsam ipsa minus harum repellat vitae rerum, amet iste pariatur doloremque excepturi optio doloribus cupiditate nam magni, sit consequuntur. Mollitia accusantium impedit porro. A, quis.
+                  p
+                    code
+                      | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae quasi voluptas quaerat rerum neque. Quidem commodi adipisci culpa inventore. Dolores enim perferendis deserunt at commodi ipsam ipsa minus harum repellat vitae rerum, amet iste pariatur doloremque excepturi optio doloribus cupiditate nam magni, sit consequuntur. Mollitia accusantium impedit porro. A, quis.
+                  
+            
+            hr.post__line
+
+            .blog__tab-item 
+              articles.post
+                h2.heading__h2.post__heading
+                  | Приёмы в вёрстке, без которых не обходится ни один сайт
+                .date__wrap
+                  time(datetime="2016-11-13").post__date
+                    | 13 ноября 2016
+                .post__desc
+                  p  
+                    | Таким образом начало повседневной работы по формированию позиции позволяет выполнять важные задания по разработке направлений прогрессивного развития. Разнообразный и богатый опыт новая модель организационной деятельности играет важную роль в формировании новых предложений. Товарищи! новая модель организационной деятельности играет важную роль в формировании систем массового участия.
+
+                  p
+                    | Не следует, однако забывать, что укрепление и развитие структуры обеспечивает широкому кругу (специалистов) участие в формировании систем массового участия. Идейные соображения высшего порядка, а также рамки и место обучения кадров обеспечивает широкому кругу (специалистов) участие в формировании позиций, занимаемых участниками в отношении поставленных задач. Товарищи! постоянный количественный рост и сфера нашей активности способствует подготовки и реализации модели развития. С другой стороны рамки и место обучения кадров влечет за собой процесс внедрения и модернизации системы обучения кадров, соответствует насущным потребностям.
+                  p
+
+block footer
+  - var footer_subclass = " blog"
+  include ../common/_footer

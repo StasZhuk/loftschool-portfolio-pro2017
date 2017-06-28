@@ -19,3 +19,10 @@
         fill: $content-right_bg;
     } 
 }
+
+.header__triangle.header__triangle--blog {
+    .triangle__left,
+    .triangle__right {
+        fill: $blog-bg;
+    } 
+}

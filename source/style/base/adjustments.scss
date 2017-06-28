@@ -69,12 +69,18 @@ a {
 }
 .heading__h2 {
     font-size: $text-size_h2;
+    line-height: 41px;
     font-weight: normal;
 }
 .heading__h2 {
     font-size: $text-size_h3;
     font-weight: normal;
     line-height: 32px;
+}
+
+p {
+    line-height: 26px;
+    margin-bottom: 20px;
 }
 
 

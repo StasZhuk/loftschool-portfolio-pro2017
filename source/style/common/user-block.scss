@@ -10,8 +10,6 @@
   display: inline-block;
   margin: 0 auto;
   border-radius: 3px;
-  overflow: hidden;
-
 }
 .user {
   position: relative;
@@ -19,7 +17,7 @@
   color: $white;
   text-align: center;
   .user__block__info {
-    padding: 0 30px;
+    padding: 0 50px;
   }
   .user__wrap-img {
     width: 140px;
