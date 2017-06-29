@@ -4,7 +4,7 @@
 
 .form__wrap-contacts {
     @include col()
-    @include col-4()
+    width: 400px;
 }
 
 .form__contacts {
