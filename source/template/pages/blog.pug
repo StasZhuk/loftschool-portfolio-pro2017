@@ -8,7 +8,7 @@ block variables
 
 block header__bottom-heading
   .header__bottom-wrap.header__bottom-heading--blog
-    h1.heading__h1 
+    h1.heading__main 
       | Блог
     .header__blog-desc
       | Статьи, которые я написал
@@ -38,10 +38,10 @@ block content
           .blog__tab-content
             .blog__tab-item
               articles.post
-                h2.heading__h2.post__heading
+                h2.heading__sub.post__heading
                   | Самое важное в SASS
                 .date__wrap
-                  time(datetime="2016-11-22").post__date
+                  time(datetime="2016-11-22").date
                     | 22 ноября 2016
                 .post__desc
                   p  
@@ -57,10 +57,10 @@ block content
 
             .blog__tab-item 
               articles.post
-                h2.heading__h2.post__heading
+                h2.heading__sub.post__heading
                   | Приёмы в вёрстке, без которых не обходится ни один сайт
                 .date__wrap
-                  time(datetime="2016-11-13").post__date
+                  time(datetime="2016-11-13").date
                     | 13 ноября 2016
                 .post__desc
                   p  

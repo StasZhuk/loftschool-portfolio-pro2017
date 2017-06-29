@@ -53,26 +53,26 @@ a {
     color: $white;
     text-decoration: none;
 }
-.heading__h1 {
+.heading__main {
     text-transform: uppercase;
 }
-.heading__h1,
-.heading__h2 {
+.heading__main,
+.heading__sub {
     position: relative;
     text-align: center;
     font-family: 'Sansus', sans-serif;
     color: $text-color_main;
 }
 
-.heading__h1 {
+.heading__main {
     font-size: $text-size_h1;
 }
-.heading__h2 {
+.heading__sub {
     font-size: $text-size_h2;
     line-height: 41px;
     font-weight: normal;
 }
-.heading__h2 {
+.heading__desc {
     font-size: $text-size_h3;
     font-weight: normal;
     line-height: 32px;
@@ -84,9 +84,9 @@ p {
 }
 
 
-.heading__h2-wrap {
+.heading__sub-wrap {
     padding: 30px 0;
-    .heading__h2 {
+    .heading__sub {
         margin-bottom: 25px;
     }
     &::after {

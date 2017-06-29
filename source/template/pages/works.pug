@@ -6,7 +6,7 @@ block variables
   - var title = 'Portfolio page'
 
 block user__desc 
-  h2.heading__h2 
+  h2.heading__sub 
     | Станислав Жуковский
   span.user__prof
     | Личный сайт веб разработчика
@@ -29,25 +29,36 @@ block header__bottom-heading
     .stars__bg-wrap
       svg.stars
         use(xlink:href='../assets/img/sprite/sprite.svg#stars_1')
-    h1.heading__h1 
+    h1.heading__main
       | Мои работы  
 
 block content
     .works 
       .slider
         .slider__main-preview
-
+          .main-preview__content
+            .heading__sub-wrap
+              h2.heading__sub
+                | Сайт школы онлайн образования
+            .main-preview__desc
+              | HTML , CSS, JAVASCRIPT
+            .main-preview-btn
+              a(href="#").btn.btn--preview
+                svg.icon
+                  use(xlink:href = '../assets/img/sprite/sprite.svg#link')
+                span
+                  | Посмотреть сайт
         .slider__small-preview
 
         .slider__preview-nav
           .slider__preview-down
             .overlay__preview.overlay__preview--left
-              a(href="#").arrow
+              a(href="#").arrow__link
                 svg(viewbox="0 0 100 100")
                   use(xlink:href="../assets/img/sprite/sprite.svg#arrow_down")
           .slider__preview-up
             .overlay__preview.overlay__preview--right
-              a(href="#").arrow.arrow--up
+              a(href="#").arrow__link.arrow--up
                 svg(viewbox="0 0 100 100")
                   use(xlink:href="../assets/img/sprite/sprite.svg#arrow_down")
 

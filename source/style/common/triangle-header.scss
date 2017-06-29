@@ -1,14 +1,14 @@
 // header triangle element
 .triangle {
-  width: 100%;
-  height: 100%;
+    width: 100%;
+    height: 100%;
 } 
 .rectangle {
-  height: 100%;
-  width: 100%;
-  polygon {
-  fill: $bg_black-opacity;
-  }
+    height: 100%;
+    width: 100%;
+    polygon {
+        fill: $bg_black-opacity;
+    }
 }
 
 .header__triangle.header__triangle--white {
