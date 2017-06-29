@@ -53,6 +53,16 @@ a {
     color: $white;
     text-decoration: none;
 }
+
+input,
+textarea,
+button {
+    border: none;
+    outline: none;
+    &:hover {
+        color: $white;
+    }
+}
 .heading__main {
     text-transform: uppercase;
 }

@@ -13,7 +13,7 @@ block user__desc
     
 block arrow__down
   .header__arrow-wrap
-    a(href="#")
+    a(href="#works")
       svg(viewbox="0 0 100 100")
         use(xlink:href="../assets/img/sprite/sprite.svg#arrow_down")
 
@@ -33,7 +33,7 @@ block header__bottom-heading
       | Мои работы  
 
 block content
-    .works 
+    section(id="works").works 
       .slider
         .slider__main-preview
           .main-preview__content
@@ -62,7 +62,53 @@ block content
                 svg(viewbox="0 0 100 100")
                   use(xlink:href="../assets/img/sprite/sprite.svg#arrow_down")
 
-
+    section.connect-me
+      .container
+        .heading__wrap
+            h2.heading__main
+              | Что обо мне говорят
+        ul.list.row
+          li.list__item
+            .reference
+                .user__wrap-img
+                     .user__img.user__reference-1
+                p.reference__desc
+                  | Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
+                span.reference__user-name
+                  | Ковальчук Дмитрий
+                span.reference__user-status
+                  | - основатель Loftschool
+          li.list__item
+            .reference
+                .user__wrap-img
+                     .user__img.user__reference-2
+                p.reference__desc
+                  | Этот код выдержеит любые испытания. Только пожалуйста, не загружается сайт на слишком старых браузерах!
+                span.reference__user-name
+                  | Сабанцев Владимир
+                span.reference__user-status
+                  | - преподователь
+        .row
+          .form__wrap-contacts
+            form(method="post" action="Menistrel2005@yandex.ru").form.form__contacts
+              .form__contacts-top
+                .heading__sub-wrap
+                  h2.heading__sub
+                    | Связаться со мной
+                .form__inputs-wrap
+                  input(type="text" name="name" placeholder="Ваше имя" required).form__input
+                .form__inputs-wrap
+                  input(type="text" name="email" placeholder="Ваше email" required).form__input
+                .form__inputs-wrap
+                  textarea(name="user_message" placeholder="Ваше сообщение" rows="7").form__input
+              .form__contact-bottom
+                input(type="submit" value="Отправить").btn.btn__submit
+                button(type="reset").btn.btn__clear
+                  | Очистить
+      .works__arrow-wrap
+        a(href="#back").arrow--up
+          svg(viewbox="0 0 100 100")
+            use(xlink:href="../assets/img/sprite/sprite.svg#arrow_down")      
 
 block footer
   - var footer_subclass =  " works"

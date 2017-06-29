@@ -1,0 +1,65 @@
+.connect-me {
+    padding: 70px 0;
+    background: #202123 url('../img/works/works_bg-tower.jpg') no-repeat center;
+    background-size: cover;
+    color: $white;
+
+    .row {
+        justify-content: center;
+        margin-bottom: 70px;
+    }
+    .heading__wrap {
+        margin: 0 250px;
+        margin-bottom: 50px;
+    }
+    .heading__main,
+    .heading__sub {
+        color: $white;
+    }
+    .heading__sub {
+        text-transform: uppercase;
+    }
+    .list__item {
+        @include col();
+        @include col-4();
+        text-align: center;
+        font-family: "robotoitalic", sans-serif;
+    }
+    .user__wrap-img {
+        border-radius: 50%;
+        max-width: 93px;
+        max-height: 93px;
+        overflow: hidden;
+        margin: 0 auto;
+        margin-bottom: 20px;
+    }
+    .user__img {
+        width: 93px;
+        height: 93px;
+        background: transparent  no-repeat center;
+        background-size: cover;
+    }
+    .user__reference-1 {
+        background-image: url('../img/works/works-user-1.png');
+        background-position: 0 -15px;
+    }
+
+    .user__reference-2 {
+        background-image: url('../img/works/works-user-2.png');
+    }
+    .works__arrow-wrap {
+        text-align: center;
+    }
+
+}
+
+.reference {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+}
+.reference__user-name {
+    font-family: "robotobold_italic", sans-serif;
+    margin-top: auto;
+    margin-bottom: 5px;
+}
