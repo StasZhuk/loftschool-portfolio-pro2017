@@ -24,6 +24,9 @@
     margin-left: auto;
     margin-top: 20px;
     margin-right: 20px;
+    @include sm() {
+        margin-right: auto;
+    }
 }
 
 
@@ -60,6 +63,7 @@
 }
 
 .copyr__wrap {
+    text-align: center;
     font-family: "robotolight", sans-serif;
     margin: 0 auto;
     margin-bottom: 40px;

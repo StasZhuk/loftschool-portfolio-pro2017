@@ -16,17 +16,46 @@
 }
 
 .blog__left {
+    position: relative;
     @include col-4();
+    @include md() {
+        position: absolute;
+        right: 100%;
+        top: 0;
+        height: 100vh;
+    }
 }
 
 .blog__right {
     @include col-8();
+    @include md() {
+        @include col-12();
+    }
 }
 
 .blog__tabs {
+    position: relative;
+    height: 100%;
     display: flex;
     flex-direction: column;
     margin-top: 5px;
+    @include sm() {
+        margin-top: 0;
+        background-color: #253468;
+    }
+}
+
+.btn__menu {
+    position: absolute;
+    width: 15px;
+    height: 40px;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 100%;
+    background-color: #253468;
+    border-radius: 0 50% 50% 0 ;
+    border-left: 0;
+    box-shadow: 3px 0 3px rgba($black, 0.2);
 }
 
 .blog__tab {
@@ -48,6 +77,10 @@
 
 .blog__tab-content {
     margin-right: 12.5%;
+    @include md() {
+        margin-right: 0;
+        padding: 0 10px;
+    }
 }
 
 .post__line {
