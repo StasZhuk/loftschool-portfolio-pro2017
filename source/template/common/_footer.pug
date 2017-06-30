@@ -3,10 +3,10 @@ footer(class="footer" + footer_subclass)
     .footer__wrap
         .container
             .row
-                .col__wrap.col__4
+                .col__wrap.col__footer-left
                     .footer__left.text--light
                         p Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. 
-                .col__wrap.col__5
+                .col__wrap.col__footer-center
                     .footer__center
                         nav.nav
                            ul.nav__list.list
@@ -20,7 +20,7 @@ footer(class="footer" + footer_subclass)
                                         a(href='#').list__link.social__list-link
                                             svg.icon
                                                 use(xlink:href= href)
-                .col__wrap.col__3
+                .col__wrap.col__footer-right
                     .footer__right
                         a(href="#")
                             | skype_ylitylia
@@ -32,5 +32,7 @@ footer(class="footer" + footer_subclass)
                             | Москва
     .footer__bottom.bg--blue
         p
-            | © staszhuk | Создано с любовью в LoftSchool | 2017
+            span.auth-name © staszhuk 
+            br.visible-sm
+            | Создано с любовью в LoftSchool | 2017
                 

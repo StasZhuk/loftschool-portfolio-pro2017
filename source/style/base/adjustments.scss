@@ -59,12 +59,13 @@ textarea,
 button {
     border: none;
     outline: none;
-    &:hover {
-        color: $white;
-    }
 }
 .heading__main {
     text-transform: uppercase;
+    @include sm() {
+        font-size: 35px;
+        line-height: 42px;
+    }
 }
 .heading__main,
 .heading__sub {
@@ -76,11 +77,19 @@ button {
 
 .heading__main {
     font-size: $text-size_h1;
+    @include md() {
+        font-size: 49px;
+        line-height: 52px;
+    }
 }
 .heading__sub {
     font-size: $text-size_h2;
     line-height: 41px;
     font-weight: normal;
+    @include sm() {
+        font-size: 21px;
+        line-height: 28px;
+    }
 }
 .heading__desc {
     font-size: $text-size_h3;
@@ -98,6 +107,9 @@ p {
     padding: 30px 0;
     .heading__sub {
         margin-bottom: 25px;
+        @include sm() {
+            margin-bottom: 15px;
+        }
     }
     &::after {
         content: '';
@@ -145,4 +157,11 @@ svg {
     content: '';
     display: table;
     clear: both;
+}
+
+.visible-sm {
+    display: none;
+    @include sm() {
+        display: block;
+    }
 }

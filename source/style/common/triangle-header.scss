@@ -18,6 +18,12 @@
     .triangle__right {
         fill: $content-right_bg;
     } 
+    @include md() {
+        .triangle__left,
+        .triangle__right {
+            fill: $content-left_bg;
+        }
+    }
 }
 
 .header__triangle.header__triangle--blog {

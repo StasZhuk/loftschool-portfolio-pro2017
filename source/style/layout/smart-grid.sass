@@ -110,6 +110,7 @@ $break_xs: 480px
 
 =size($n)
     $value: $atom * $n
+    min-width: #{calc(#{$value} - #{$offset})}
     width: #{calc(#{$value} - #{$offset})}
 
 =col-1()
@@ -216,6 +217,7 @@ $break_xs: 480px
 =size-lg($n)
     @media screen and (max-width: $break_lg)
         $value: $atom * $n
+        min-width: #{calc(#{$value} - #{$offset})}
         width: #{calc(#{$value} - #{$offset})}
     
 
@@ -371,6 +373,7 @@ $break_xs: 480px
 =size-md($n)
     @media screen and (max-width: $break_md)
         $value: $atom * $n
+        min-width: #{calc(#{$value} - #{$offset})}
         width: #{calc(#{$value} - #{$offset})}
     
 
@@ -526,6 +529,7 @@ $break_xs: 480px
 =size-sm($n)
     @media screen and (max-width: $break_sm)
         $value: $atom * $n
+        min-width: #{calc(#{$value} - #{$offset})}
         width: #{calc(#{$value} - #{$offset})}
     
 
@@ -681,6 +685,7 @@ $break_xs: 480px
 =size-xs($n)
     @media screen and (max-width: $break_xs)
         $value: $atom * $n
+        min-width: #{calc(#{$value} - #{$offset})}
         width: #{calc(#{$value} - #{$offset})}
     
 

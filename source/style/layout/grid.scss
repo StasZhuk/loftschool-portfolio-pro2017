@@ -8,6 +8,7 @@
     flex-wrap: wrap;
 }
 .col__wrap {
+    @include col();  
     flex: 1;
 }
 .col__4 {

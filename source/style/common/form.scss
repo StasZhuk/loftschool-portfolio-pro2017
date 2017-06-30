@@ -1,10 +1,9 @@
-.form {
-
-}
-
 .form__wrap-contacts {
-    @include col()
-    width: 400px;
+    @include col();
+    @include md() {
+        width: 350px;
+    }
+        width: 400px;
 }
 
 .form__contacts {

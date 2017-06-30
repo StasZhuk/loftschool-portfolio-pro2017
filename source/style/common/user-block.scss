@@ -30,6 +30,11 @@
   .heading__sub {
     margin-bottom: 5px;
     color: $white;
+    white-space: nowrap;
+    @include sm() {
+      font-size: 21px;
+      line-height: 28px;
+    }
   }
 }
 

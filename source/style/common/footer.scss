@@ -9,6 +9,9 @@
     .socials{
         width: 150px;
         margin-left: 0;
+        @include sm() {
+            margin: 0 auto;
+        }
     }
     .social__list {
         justify-content: space-between;
@@ -19,10 +22,26 @@
             fill: $acsent;
         }
     }
+    .nav {
+        @include sm() {
+            margin-bottom: 10px;
+        }
+    }
     .nav__list-item {
+        flex: 1;
+        text-align: center;
         margin-right: 10px;
+        @include md() {
+            margin-right: 30px;
+        }
+        @include sm() {
+            margin-right: 10px;
+            margin-left: 10px;
+            margin-bottom: 5px;
+        }
     }
     .nav__list-link { 
+        white-space: nowrap;
         transition: color 0.3s;
         &:hover {
             color: $acsent;
@@ -32,6 +51,15 @@
         flex-wrap: wrap;
         li:last-child {
             margin-right: 0;
+        }
+        @include md() {
+            justify-content: flex-start;
+        }
+        @include sm() {
+            justify-content: space-between;
+            li:last-child {
+                margin-right: 10px;
+            }
         }
     }
     p {
@@ -52,17 +80,42 @@
     height: 100%;
     padding: 0 30px;
     border-left: 2px solid rgba($white, 0.2); 
-    border-right: 2px solid rgba($white, 0.2);  
+    border-right: 2px solid rgba($white, 0.2); 
+    @include md() {
+        border: none;  
+        padding: 0;   
+    }
+    @include sm() {
+            padding-bottom: 15px;
+            border-bottom: 1px solid rgba($white, 0.2); 
+            margin-bottom: 15px;
+        }
 }
 .footer__right {
     display: flex;
     height: 100%;
     flex-direction: column;
     justify-content: space-between;
-    padding: 0 30px;    
+    padding-left: 30px;  
+    @include md() {  
+        text-align: right;
+        padding: 0;
+    }
+    @include sm() {  
+        @include col-12();
+        text-align: center;
+    }
 }
 .footer__left {
-    padding: 0 30px;    
+    width: 100%;
+    padding: 0 30px;  
+    @include md() {
+        margin-bottom: 15px;
+        padding: 0;
+        padding-bottom: 15px;
+        border-bottom: 1px solid rgba($white, 0.2);  
+        text-align: center;   
+    }
 }
 .footer__bottom {
     text-align: center;
@@ -71,4 +124,34 @@
 
 .bg--blue {
     background-color: rgba($acsent, 0.5);
+}
+
+.auth-name {
+    margin-right: 10px;
+    @include sm() {
+        margin-right: 0;
+    }
+}
+
+.col__footer-left {
+    @include col-4(); 
+    @include md() {
+        @include col-12();     
+    }
+}
+.col__footer-center {
+    @include col-5();  
+    @include md() {
+        @include col-8();     
+    }
+    @include sm() {
+        @include col-12();
+        margin-bottom: 15px;    
+    }
+}
+.col__footer-right {
+    @include col-3();
+    @include md() {
+        @include col-4();     
+    }  
 }

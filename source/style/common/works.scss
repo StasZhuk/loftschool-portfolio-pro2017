@@ -3,14 +3,29 @@
     background: #202123 url('../img/works/works_bg-tower.jpg') no-repeat center;
     background-size: cover;
     color: $white;
+    @include sm() {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
 
     .row {
         justify-content: center;
         margin-bottom: 70px;
+        @include sm() {
+            margin-bottom: 0;
+        }
     }
     .heading__wrap {
-        margin: 0 250px;
+        margin: 0 200px;
         margin-bottom: 50px;
+        @include md() {
+            margin-left: 80px;
+            margin-right: 80px;
+        }
+        @include sm() {
+            margin: 0;
+            margin-bottom: 30px;
+        }
     }
     .heading__main,
     .heading__sub {
@@ -19,11 +34,25 @@
     .heading__sub {
         text-transform: uppercase;
     }
+        .list__item:last-child {
+        @include sm() {
+            margin-bottom: 20px;
+        }
+    }
     .list__item {
         @include col();
         @include col-4();
         text-align: center;
         font-family: "robotoitalic", sans-serif;
+        padding: 0 10px;
+        @include md() {
+            @include col-6();
+        }
+        @include sm() {
+            @include col-12();
+            margin-bottom: 40px;
+            padding: 0;
+        }
     }
     .user__wrap-img {
         border-radius: 50%;
@@ -32,6 +61,11 @@
         overflow: hidden;
         margin: 0 auto;
         margin-bottom: 20px;
+        @include sm() {
+            max-width: 56px;
+            max-height: 56px;
+            margin-bottom: 15px;
+        }
     }
     .user__img {
         width: 93px;
@@ -49,6 +83,9 @@
     }
     .works__arrow-wrap {
         text-align: center;
+        @include sm() {
+            padding-top: 30px;
+        }
     }
 
     .icon:hover {
@@ -66,4 +103,18 @@
     font-family: "robotobold_italic", sans-serif;
     margin-top: auto;
     margin-bottom: 5px;
+}
+.reference__desc {
+    position: relative;
+    z-index: 2;
+    text-align: left;
+    i {
+        z-index: 1;
+        position: absolute;
+        top: 10px;
+        transform: translateY(-50%);
+        left: 0;
+        font-size: 80px;
+        color: rgba($white, 0.1);
+    }
 }
