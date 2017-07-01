@@ -1,11 +1,12 @@
 .btn {
-    display: block;
-    height: 45px;
+    max-height: 45px;
     line-height: 45px;
+    display: block;
     text-align: center;
     color: $white;
     border: 1px solid transparent;
     border-radius: 2px;
+    padding: 0 5px;
     cursor: pointer;
     transition: background-color 0.3s, border-color 0.3s;
     &:hover {
@@ -14,8 +15,9 @@
     }
 }
 .btn__auth {
-    padding: 0 30px;
     border-color: $white;
+    padding-left: 30px;
+    padding-right: 30px;
 }
 .btn--preview {
     width: initial;
@@ -24,7 +26,7 @@
     justify-content: space-between;
     align-items: center;
     background-color: $acsent;
-    padding: 0 20px;
+    padding: 15px 20px;
 
     svg {
         width: 20px;
@@ -50,4 +52,9 @@
             color: $white;
             background-color: rgba(red, 0.3);
     }
+}
+
+.btn__login {
+    width: 100%;
+    background-color: $acsent;
 }

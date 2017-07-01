@@ -1,41 +1,80 @@
 html
-  include common/_generals
   block source
     - var url_js= 'index.js'
+
+  include common/_generals
+
     
   block title
     - var title= 'Index page'
   body.auth
     .auth__wrap
-      .btn.btn__auth
+      a(onclick="document.querySelector('.flip__container').classList.toggle('flip');").btn.btn__auth
         | Авторизация
-    .user__wrap
-      .user
-        .user__block-info
-          .user__wrap-img
-            img(alt="image" src="/assets/img/header/logo_user.jpg").user__img
-          h2.heading__sub
-            | Станислав Жуковский
-          span.user__prof
-            | Личный сайт веб разработчика
-          .socials
-            ul.social__list.list
-              each href, item in {'vk' : '../assets/img/sprite/sprite.svg#vk', 'skype': '../assets/img/sprite/sprite.svg#skype' , 'git': '../assets/img/sprite/sprite.svg#github'}
-                li.list__item.social__list-item
-                  a(href='#').list__link.social__list-link
-                    svg.icon
-                      use(xlink:href= href)
-        .auth__nav
-          ul.auth__nav-list
-            li.auth__nav-item
-              a(href='./pages/works.html').auth__nav-link
-                | Мои работы
-            li.auth__nav-item
-              a(href='./pages/about.html').auth__nav-link
-                | Обо мне
-            li.auth__nav-item
-              a(href='./pages/blog.html').auth__nav-link
-                | Блог
+    .user__wrap.flip__container
+       .flipper
+        .front
+         .user
+          .user__block-info
+            .user__wrap-img
+              img(alt="image" src="/assets/img/header/logo_user.jpg").user__img
+            h2.heading__sub
+              | Станислав Жуковский
+            span.user__prof
+              | Личный сайт веб разработчика
+            .socials
+              ul.social__list.list
+                each href, item in {'vk' : '../assets/img/sprite/sprite.svg#vk', 'skype': '../assets/img/sprite/sprite.svg#skype' , 'git': '../assets/img/sprite/sprite.svg#github'}
+                  li.list__item.social__list-item
+                    a(href='#').list__link.social__list-link
+                      svg.icon
+                        use(xlink:href= href)
+          .auth__nav
+            ul.auth__nav-list
+              li.auth__nav-item
+                a(href='./pages/works.html').auth__nav-link.btn
+                  | Мои работы
+              li.auth__nav-item
+                a(href='./pages/about.html').auth__nav-link.btn
+                  | Обо мне
+              li.auth__nav-item
+                a(href='./pages/blog.html').auth__nav-link.btn
+                  | Блог
+
+        .back
+         .user.user-auth
+          .user__block-info
+            form.form.form__login
+              .heading__sub.heading--uppercase
+                | Авторизуйтесть
+              .inputs__wrap
+                input(type="text" name="login" placeholder="Логин" required).input--white
+              .inputs__wrap
+                input(type="password" name="login" placeholder="Пароль" required).input--white
+              .inputs__wrap.inputs__flex-wrap.checkbox
+                input(type="checkbox" required id="human") 
+                label(for="human")
+                  | Я чеовек
+              .radio-group
+                .radio__desc
+                  | Вы точно не робот?
+                .radio__wrap.inputs__flex-wrap
+                  input(type="radio" name="human" value="Yes" id="radio-yes").radio
+                  label(for="radio-yes")
+                    | Да
+                .radio__wrap.inputs__flex-wrap
+                  input(type="radio" name="human" value="Nooo" id="radio-no").radio
+                  label(for="radio-no")
+                    | Не уверен
+              .auth__nav
+               ul.auth__nav-list
+                  li.auth__nav-item
+                    a(href='./pages/about.html').auth__nav-link.btn
+                      | На главную
+                  li.auth__nav-item
+                    button(type="submit").auth__nav-link.btn.btn__login
+                      | Войти        
+
     .copyr__wrap
       .copyr
         span.auth-name

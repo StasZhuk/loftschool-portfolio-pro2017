@@ -75,6 +75,10 @@ button {
     color: $text-color_main;
 }
 
+.heading--uppercase {
+    text-transform: uppercase;
+}
+
 .heading__main {
     font-size: $text-size_h1;
     @include md() {

@@ -30,6 +30,7 @@
     }
 }
 input[type="text"],
+input[type="password"],
 textarea {
     padding: 15px;
     width: 100%;
@@ -41,4 +42,41 @@ textarea::placeholder,
 input[type="text"]::placeholder,
 button[type="reset"] {
     color: rgba($white, 0.5);
+}
+
+input.input--white {
+    width: 100%;
+    background-color: $white;
+    margin-bottom: 20px;
+    color: $text-color_main;
+    &::placeholder {
+        color: $text-color_main;
+    }
+}
+
+.inputs__flex-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.radio-group {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    .radio__wrap {
+        margin-right: 40px;
+    }
+    .radio__wrap:last-child {
+        margin-right: 0;
+    }
+    input {
+        margin-right: 5px;
+    }
+}
+
+.checkbox {
+    input {
+        margin-right: 5px;
+    }
 }

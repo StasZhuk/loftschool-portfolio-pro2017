@@ -7,7 +7,9 @@
   background-position: round;
 }
 .user__wrap {
+  position: relative;
   width: 350px;
+  height: 405px;
   max-width: 350px;
   display: inline-block;
   margin: 0 auto;
@@ -22,6 +24,7 @@
 }
 .user {
   position: relative;
+  width: 100%;
   z-index: 2;
   color: $white;
   text-align: center;
@@ -29,15 +32,13 @@
   .user__wrap-img {
     width: 140px;
     height: 140px;
-    margin: 0 auto;
+    margin: 40px auto 20px;
     overflow: hidden;
     border-radius: 50%;
-    margin-bottom: 20px;
   }
   .heading__sub {
     margin-bottom: 5px;
     color: $white;
-    white-space: nowrap;
     @include sm() {
       font-size: 21px;
       line-height: 28px;
@@ -50,5 +51,42 @@
         height: auto;
         width: 100%;
     }
+}
+
+.user__block-info {
+  flex: 1;
+}
+
+.user-auth {
+  .form__login {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0;
+  }
+  .heading__sub {
+    padding: 40px 0;
+    margin: 0;
+  }
+  .auth__nav-list li:first-child {
+    flex-grow: 1;
+  }
+  .inputs__wrap {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .auth__nav {
+    margin-top: auto;
+  }
+  .radio__desc {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .checkbox {
+    margin-bottom: 15px;
+  }
+  label {
+    color: rgba($white, 0.7);
+  }
 }
 
