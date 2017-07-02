@@ -1,2 +1,4 @@
 const $ = require('jquery');
-console.log($);
+const burger = require('../modules/burger');
+
+burger();

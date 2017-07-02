@@ -12,13 +12,14 @@ header(id="back").header
 
                 .header__nav
                   .header__burger
-                    .burger
+                    .burger.no-animation
                       span.burger__line
-                  nav.nav
+                  nav(id="main-nav").nav.nav__main
                     ul.nav__list.list
                       each href, title in {'Мои работы': '/pages/works.html', 'Блог': '/pages/blog.html', 'Обо мне': '/pages/about.html', 'Авторизация': '/pages/auth.html'}
                         li.nav__list-item.list__item
-                          a(href= href).nav__list-link= title
+                          a(href= href).nav__list-link.active
+                            span= title
 
         .header__center
             .stars__bg-wrap

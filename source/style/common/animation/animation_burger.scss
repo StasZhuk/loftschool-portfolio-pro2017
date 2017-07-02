@@ -1,0 +1,116 @@
+        .burger {
+            &::before,
+            &::after {
+                transform-origin: center;
+            }
+            &::after {
+                animation: burgerBackBottomLine 0.5s ease-in-out forwards;
+            }
+            &::before {
+                animation: burgerBackTopLine 0.5s ease-in-out forwards;
+            }
+            .burger__line {
+                animation: burgerBack 0.5s ease-in-out forwards;
+            }
+            @include md() {
+                &::after {
+                   animation: burgerBackBottomLine 0.5s ease-in-out forwards;
+               }
+                &::before {
+                    animation: burgerBackTopLine 0.5s ease-in-out forwards;
+                }
+                .burger__line {
+                    animation: burgerBack 0.5s ease-in-out forwards;
+                }
+            }
+        }
+
+        .burger.no-animation {
+            &:before,
+            &:after {
+                animation: none !important;
+            }
+            .burger__line {
+                animation: none !important;
+            }
+        }
+        .burger.active .burger__line {
+            animation: burger 0.5s ease-in-out forwards;
+        }
+        .burger.active::before {
+            animation: burgerTopLine 0.5s ease-in-out forwards;
+        }
+        .burger.active::after {
+            animation: burgerBottomLine 0.5s ease-in-out forwards;
+        }
+
+    @keyframes burger {
+        0% {
+            transform: translate3d(0, 0, 0) scale(1.0);
+            opacity: 1;
+        }
+        100% {
+            transform: translate3d(0, 0, 0) scale(0);
+            opacity: 0;
+        }
+    }
+
+    @keyframes burgerBack {
+        0% {
+            transform: translate3d(0, 0, 0) scale(0);
+            opacity: 0;
+        }
+        100% {
+            transform: translate3d(0, 0, 0) scale(1.0);
+            opacity: 1;
+        }
+    }
+
+    @keyframes burgerTopLine {
+        0% {
+            transform: translate3d(0, 0, 0) rotate(0);
+        }
+        50% {
+            transform: translate3d(0, 15.5px, 0) rotate(0);
+        }
+        100% {
+            transform: translate3d(0, 15.5px, 0) rotate(135deg);
+        }
+    }
+
+
+    @keyframes burgerBackTopLine {
+        0% {
+            transform: translate3d(0, 15.5px, 0) rotate(135deg);
+        }
+        50% {
+            transform: translate3d(0, 15.5px, 0) rotate(0);
+        }
+        100% {
+            transform: translate3d(0, 0, 0) rotate(0);
+        }
+    }
+
+    @keyframes burgerBottomLine {
+        0% {
+            transform: translate3d(0, 0, 0) rotate(0);
+        }
+        50% {
+            transform: translate3d(0, -15.5px, 0) rotate(0);
+        }
+        100% {
+            transform: translate3d(0, -15.5px, 0) rotate(-135deg);
+        }
+    }
+
+    @keyframes burgerBackBottomLine {
+        0% {
+            transform: translate3d(0, -15.5px, 0) rotate(-135deg);
+        }
+        50% {
+            transform: translate3d(0, -15.5px, 0) rotate(0);
+        }
+        100% {
+            transform: translate3d(0, 0, 0) rotate(0);
+        }
+    }

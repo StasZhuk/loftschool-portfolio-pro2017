@@ -1,7 +1,6 @@
 const $ = require('jquery');
-const slider = require('../modules/slider');
+const burger = require('../modules/burger');
 
-console.log($);
-console.log(slider());
+burger();
 
 // код приложения
