@@ -47,6 +47,7 @@
 
 .btn__menu {
     position: absolute;
+    display: none;
     width: 15px;
     height: 40px;
     top: 50%;
@@ -56,6 +57,9 @@
     border-radius: 0 50% 50% 0 ;
     border-left: 0;
     box-shadow: 3px 0 3px rgba($black, 0.2);
+    @include sm() {
+        display: block;
+    }
 }
 
 .blog__tab {

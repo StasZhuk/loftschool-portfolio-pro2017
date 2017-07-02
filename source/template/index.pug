@@ -9,10 +9,14 @@ html
     - var title= 'Index page'
   body.auth
     .animation-bg
-      .auth-stars
-      .clouds
-      .twinkling
-      img(id="js_parallax_mountains" src="./assets/img/parallax/mountains.png").mountains
+      .parallax#parallax
+        .auth-stars
+        .clouds
+        .twinkling
+        - for (var i = 1; i < 8; i++)
+          .parallax__layer
+            img(src=`/assets/img/parallax/_layer_${i}.png`).parallax__image
+      //- img(id="js_parallax_mountains" src="./assets/img/parallax/mountains.png").mountains
     .auth__wrap
       a.btn.btn__auth
         | Авторизация

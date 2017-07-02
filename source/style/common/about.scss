@@ -1,4 +1,5 @@
 .about {
+    padding-top: 50px;
     @include md() {
         background-color: $content-left_bg;
 

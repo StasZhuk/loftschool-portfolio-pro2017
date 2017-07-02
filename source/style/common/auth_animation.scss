@@ -15,35 +15,25 @@
   bottom: 0;
 }
 
-.auth-stars, .twinkling, .clouds, .mountains {
+.auth-stars, .twinkling, .clouds {
   position: absolute;
   top: 0;
   left: 0;
-  right: 0;
-  bottom: 0;
-  width: 100%;
+  width: 110%;
   height: 100%;
   display: block;
 }
 
-.mountains {
-  background: url('../img/parallax/mountains.png') no-repeat center;
-  z-index: 4;
-}
-
-.auth-stars {
-  background: $bg__auth url('../img/auth__animation/stars.png') repeat top center;
-  z-index: 0;
-}
-
 .twinkling{
   background: transparent url('../img/auth__animation/twinkling.png') repeat top center;
-  z-index: 1;
+  z-index: 3;
   animation: move-twink-back 400s linear infinite;
 }
 
 .clouds{
     background: transparent url('../img/auth__animation/clouds.png') repeat top center;
-    z-index: 3;
+    z-index: 6;
     animation: move-clouds-back 300s linear infinite;
+    top: -200px;
+    left: -20px;
 }
