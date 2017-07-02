@@ -8,6 +8,8 @@
 }
 .user__wrap {
   position: relative;
+  z-index: 100;
+  overflow: hidden;
   width: 350px;
   height: 405px;
   max-width: 350px;

@@ -4,7 +4,7 @@ module.exports = function() {
         //получаем элементы
         var button = document.querySelector('.btn__auth');
         var flipContainer = document.querySelector('.flip__container');
-        var body = document.querySelector('.auth');
+        var body = document.querySelector('.clouds');
 
         
         //вешаем на него событие
