@@ -1,12 +1,13 @@
 .auth {
+    position: relative;
+    z-index: 3;
     color: $white;
     width: 100vw;
     height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between; 
-    background: #10264F url('../img/auth/auth_bg.jpg') no-repeat center;
-    background-size: cover;
+    background: $bg__auth;
     .socials {
         margin-top: 30px;
         margin-bottom: 40px;

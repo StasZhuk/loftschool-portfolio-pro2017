@@ -7,7 +7,15 @@
     to {background-position:10000px 0;}
 }
 
-.auth-stars, .twinkling, .clouds {
+.animation-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.auth-stars, .twinkling, .clouds, .mountains {
   position: absolute;
   top: 0;
   left: 0;
@@ -18,8 +26,13 @@
   display: block;
 }
 
+.mountains {
+  background: url('../img/parallax/mountains.png') no-repeat center;
+  z-index: 4;
+}
+
 .auth-stars {
-  background: #000 url('../img/auth__animation/stars.png') repeat top center;
+  background: $bg__auth url('../img/auth__animation/stars.png') repeat top center;
   z-index: 0;
 }
 
