@@ -15,7 +15,7 @@
   bottom: 0;
 }
 
-.auth-stars, .twinkling, .clouds {
+.auth-stars, .twinkling, .clouds, .wrapper{
   position: absolute;
   top: 0;
   left: 0;
@@ -24,16 +24,25 @@
   display: block;
 }
 
+.wrapper {
+  z-index: 15;
+}
+
 .twinkling{
   background: transparent url('../img/auth__animation/twinkling.png') repeat top center;
-  z-index: 3;
+  z-index: 4;
   animation: move-twink-back 400s linear infinite;
+}
+.auth-stars {
+  background: transparent url('../img/parallax/_layer_1.png') no-repeat top center;
+  z-index: 3;
 }
 
 .clouds{
-    background: transparent url('../img/auth__animation/clouds.png') repeat top center;
-    z-index: 6;
+    background: transparent url('../img/parallax/_cloud_3.png') repeat top center;
+    background-size: 90%;
+    z-index: 7;
     animation: move-clouds-back 300s linear infinite;
-    top: -200px;
-    left: -20px;
+    top: 39%;
+    left: 0;
 }

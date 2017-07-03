@@ -1,0 +1,38 @@
+.scroll-parallax {
+    position: absolute;
+    z-index: 2;
+    background: $bg__auth;
+    // overflow-x: hidden;
+    // overflow-y: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    // perspective: 100px;
+}
+.scroll-parallax__layer {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    // transform: translateZ(-50px);
+}
+.scroll-parallax__image {
+    position: absolute;
+    display: block;
+    width: 100%;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.parallax__content {
+    height: 2000px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100%;
+    background-color: #090614;
+
+}
