@@ -17,6 +17,7 @@ html
         - for (var i = 1; i < 10; i++)
           .parallax__layer
             img(src=`/assets/img/parallax/_layer_${i}.png`).parallax__image
+        .clouds-2
 
     .auth__wrap
       a.btn.btn__auth
@@ -58,13 +59,19 @@ html
               .heading__sub.heading--uppercase
                 | Авторизуйтесть
               .inputs__wrap
+                .inputs__wrap-icon
+                  svg.icon
+                    use(xlink:href='../assets/img/sprite/sprite.svg#login')
                 input(type="text" name="login" placeholder="Логин" required).input--white
               .inputs__wrap
+                .inputs__wrap-icon
+                  svg.icon
+                    use(xlink:href='../assets/img/sprite/sprite.svg#password')
                 input(type="password" name="login" placeholder="Пароль" required).input--white
               .inputs__wrap.inputs__flex-wrap.checkbox
                 input(type="checkbox" id="human") 
                 label(for="human")
-                  | Я чеовек
+                    | Я чеовек
               .radio-group
                 .radio__desc
                   | Вы точно не робот?

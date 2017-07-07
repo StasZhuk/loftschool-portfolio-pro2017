@@ -7,17 +7,13 @@ module.exports = function() {
                 burger.classList.remove('no-animation');
                 nav.style.opacity = '0';
                 setTimeout(function() {
-                   nav.style.visibility = 'hidden';  
+                   nav.style.left = '-9999px';  
                 }, 500)
-                  
-                // nav.classList.remove('active');
-                           
-                // nav.style.display = 'none'; 
             }
             else {
                 burger.classList.add('active');
                 burger.classList.remove('no-animation');
-                nav.style.visibility = 'visible'; 
+                nav.style.left = '0'; 
                 nav.style.opacity = '1';   
             }
             return false;

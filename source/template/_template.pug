@@ -9,6 +9,22 @@ html
   body
     .main__wrapper
       include ./common/_header
+      .header__burger
+        .burger.no-animation
+          span.burger__line
+      .socials
+        ul.social__list.list
+          each href, item in {'vk' : '../assets/img/sprite/sprite.svg#vk', 'skype': '../assets/img/sprite/sprite.svg#skype' , 'git': '../assets/img/sprite/sprite.svg#github'}
+            li.list__item.social__list-item
+              a(href='#').list__link.social__list-link
+                svg.icon
+                  use(xlink:href= href)
+      nav(id="main-nav").nav.nav__main
+        ul.nav__list.list
+          each href, title in {'Мои работы': '/pages/works.html', 'Блог': '/pages/blog.html', 'Обо мне': '/pages/about.html', 'Авторизация': '/index.html'}
+            li.nav__list-item.list__item
+              a(href= href).nav__list-link.active
+                span= title
 
       .main-content
         block content

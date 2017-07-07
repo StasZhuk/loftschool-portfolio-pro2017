@@ -2,23 +2,37 @@
     position: absolute;
     z-index: 2;
     background: $bg__auth;
-    // overflow-x: hidden;
-    // overflow-y: auto;
+    overflow-x: hidden;
+    overflow-y: auto;
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
 
-    // perspective: 100px;
+    perspective: 100px;
 }
 .scroll-parallax__layer {
     position: absolute;
+    z-index: 100;
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
-    // transform: translateZ(-50px);
 }
+
+.scroll-parallax__layer:nth-child(1) {
+    transform: translateZ(-50px) scale(1.5);
+}
+.scroll-parallax__layer:nth-child(2) {
+    transform: translateZ(-100px) scale(2);
+}
+
+// .scroll-parallax__container {
+//     width: 100%;
+//     height: 100%;
+ 
+// }
+
 .scroll-parallax__image {
     position: absolute;
     display: block;
@@ -34,5 +48,6 @@
     right: 0;
     top: 100%;
     background-color: #090614;
+       transform: translateZ(0);
 
 }

@@ -1,4 +1,3 @@
-// socials icon-list
 .socials {
     margin: 0 auto;
     width: 150px;
@@ -6,8 +5,6 @@
         display: block;
     }
 }
-// social icons 
-
 
 .icon {
     display: inline-block;
@@ -20,4 +17,11 @@
     &:hover {
         fill: $acsent;
     }
+}
+
+.main__wrapper .socials {
+    z-index: 100;
+    position: absolute;
+    left: 30px;
+    top: 30px;
 }

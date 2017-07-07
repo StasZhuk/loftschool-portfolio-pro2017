@@ -16,8 +16,6 @@ module.exports = function() {
                     positionLeft = (window.innerWidth / 2) * divider,
                     transformString = 'translate(' + positionX + 'px, ' + positionY + 'px)',
                     image = layer.firstElementChild;
-                    console.log(layer);
-                    console.log(image);
 
                 layer.style.transform = transformString;
                 // image.css.bottom = positionLeft;

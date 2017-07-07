@@ -20,6 +20,7 @@
       z-index: 10;
   }
   & .parallax__layer:nth-child(11) {
+      opacity: 0;
       top: 73%;
       z-index: 9;
       width: 50%;
@@ -41,11 +42,11 @@
       z-index: 6;
       width: 50%;
       height: 50%;
+      animation: move-clouds-back 400s linear infinite;
   }
   & .parallax__layer:nth-child(7) {
       top: 67%;
       z-index: 5;
-      
   }
   & .parallax__layer:nth-child(6) {
       top: 74%;
@@ -54,6 +55,7 @@
   & .parallax__layer:nth-child(5) {
       top: 0%;
       z-index: 3;
+      opacity: 0;
 
   }
 }

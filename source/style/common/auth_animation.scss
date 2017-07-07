@@ -15,7 +15,7 @@
   bottom: 0;
 }
 
-.auth-stars, .twinkling, .clouds, .wrapper{
+.auth-stars, .twinkling, .clouds, .clouds-2, .wrapper{
   position: absolute;
   top: 0;
   left: 0;
@@ -44,5 +44,14 @@
     z-index: 7;
     animation: move-clouds-back 300s linear infinite;
     top: 39%;
-    left: 0;
+    left: -5%;
+}
+.clouds-2{
+    background: transparent url('../img/parallax/_layer_7.png') repeat top center;
+    background-size: 90%;
+    z-index: 7;
+    animation: move-clouds-back 800s linear infinite;
+    top: 70%;
+    left: -10%;
+    z-index: 9;
 }

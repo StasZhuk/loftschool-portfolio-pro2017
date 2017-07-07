@@ -1,11 +1,12 @@
 'use strict';
 
 module.exports = function() {
+  var YOUR_LOCALS = './content.json';
   $.gulp.task('pug', function() {
-    // var YOUR_LOCALS = require('./content.json');
     return $.gulp.src(['./source/template/**/*.pug', '!./source/template/**/_*.pug'])
       .pipe($.gp.pug({ 
-        // locals: YOUR_LOCALS,
+        // locals: JSON.parse($.fs.readFile(YOUR_LOCALS, 'utf-8')),
+        locals: YOUR_LOCALS,
         pretty: true }))
       .on('error', $.gp.notify.onError(function(error) {
         return {

@@ -1,4 +1,6 @@
 .form__wrap-contacts {
+    background: url('../img/works/works_bg-tower.jpg') no-repeat 49% 77%;
+    background-position: cover;
     @include col();
     @include md() {
         width: 350px;
@@ -10,6 +12,8 @@
     background-color: rgba($white, 0.05);
 }
 .form__contacts-top {
+    position: relative;
+    z-index: 100;
     display: flex;
     flex-direction: column;
     margin: 20px;
@@ -28,6 +32,7 @@
     &:last-child {
         margin-bottom: 0;
     }
+
 }
 input[type="text"],
 input[type="password"],
@@ -47,7 +52,6 @@ button[type="reset"] {
 input.input--white {
     width: 100%;
     background-color: $white;
-    margin-bottom: 20px;
     color: $text-color_main;
     &::placeholder {
         color: $text-color_main;

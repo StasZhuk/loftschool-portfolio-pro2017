@@ -15,6 +15,7 @@ global.$ = {
   browserSync: require('browser-sync').create(),
   smartgrid: require('smart-grid'),
   gcmq: require('gulp-group-css-media-queries'),
+  fs: require('fs'),
   gp: require('gulp-load-plugins')()
 };
 
