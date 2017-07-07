@@ -8,6 +8,9 @@ html
   block title
     - var title= 'Index page'
   body.auth
+    div(id="page-preloader").preloader
+      .loader
+        span(id="load-perc") 0%
     .animation-bg
       .parallax#parallax
         .wrapper

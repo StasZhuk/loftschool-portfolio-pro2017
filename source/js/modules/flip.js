@@ -1,6 +1,6 @@
 module.exports = function() {
 
-    return window.onload = function () {
+
         //получаем элементы
         var button = document.querySelector('.btn__auth');
         var buttonBack = document.querySelector('.btn__back');
@@ -39,6 +39,6 @@ module.exports = function() {
             }
             return false;
         }
-    }
+
 
 }
