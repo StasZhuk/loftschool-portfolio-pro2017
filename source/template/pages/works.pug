@@ -35,7 +35,8 @@ block header__bottom-heading
 block content
     div(id="page-preloader").preloader
       .loader
-        span(id="load-perc") 0%
+        span(id="load-perc")
+    +nav('nav', {'Мои работы': '/pages/works.html', 'Блог': '/pages/blog.html', 'Обо мне': '/pages/about.html', 'Авторизация': '/index.html'}, 'Мои работы')
     section(id="works").works 
       .slider
         .slider__main-preview

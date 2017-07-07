@@ -1,6 +1,4 @@
 .form__wrap-contacts {
-    background: url('../img/works/works_bg-tower.jpg') no-repeat 49% 77%;
-    background-position: cover;
     @include col();
     @include md() {
         width: 350px;

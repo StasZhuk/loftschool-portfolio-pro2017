@@ -10,6 +10,7 @@
     }
     @include sm() {
         width: 100%;
+        height: auto;
     }
     svg {
         min-width: 40px;

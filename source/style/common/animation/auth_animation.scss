@@ -24,6 +24,13 @@
   display: block;
 }
 
+.clouds-2,
+.clouds {
+  @include md() {
+    display: none;
+  }
+}
+
 .wrapper {
   z-index: 15;
 }
