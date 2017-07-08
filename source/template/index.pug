@@ -58,22 +58,24 @@ html
         .back
          .user.user-auth
           .user__block-info
-            form.form.form__login
+            form.form.form__login#form
               .heading__sub.heading--uppercase
                 | Авторизуйтесть
               .inputs__wrap
                 .inputs__wrap-icon
-                  svg.icon
+                  svg.icon.icon-login
                     use(xlink:href='../assets/img/sprite/sprite.svg#login')
-                input(type="text" name="login" placeholder="Логин" required).input--white
+                input(type="text" name="login" placeholder="Логин" id="form-login" required).input.input--white
+                span
               .inputs__wrap
                 .inputs__wrap-icon
-                  svg.icon
+                  svg.icon.icon-pass
                     use(xlink:href='../assets/img/sprite/sprite.svg#password')
-                input(type="password" name="login" placeholder="Пароль" required).input--white
+                input(type="password" name="login" placeholder="Пароль" id="form-password" required).input.input--white
+                span
               .inputs__wrap.inputs__flex-wrap.checkbox
-                input(type="checkbox" id="human") 
-                label(for="human")
+                input(type="checkbox" id="check-human") 
+                label(for="check-human")
                     | Я чеовек
               .radio-group
                 .radio__desc
@@ -92,7 +94,7 @@ html
                     a(href='./pages/about.html').auth__nav-link.btn.btn__back
                       | На главную
                   li.auth__nav-item
-                    button(type="submit").auth__nav-link.btn.btn__login
+                    button(type="submit").auth__nav-link.btn.btn__login#submit
                       | Войти        
 
     .copyr__wrap

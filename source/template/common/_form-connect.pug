@@ -1,0 +1,17 @@
+.form__wrap-contacts
+    form(method="post" action="Menistrel2005@yandex.ru").form.form__contacts
+        .form__contacts-top
+            .heading__sub-wrap
+                h2.heading__sub
+                    | Связаться со мной
+            .form__inputs-wrap
+                input(type="text" name="name" placeholder="Ваше имя" id="name-connect" required).form__input
+            .form__inputs-wrap
+                input(type="text" name="email" placeholder="Ваше email" id="mail-connect" required).form__input
+            .form__inputs-wrap
+                textarea(name="user_message" placeholder="Ваше сообщение" id="message-connect" rows="7").form__input
+        .form__contact-bottom
+            button(type="submit" id="submit-connect").btn.btn__submit
+                | Отправить
+            button(type="reset").btn.btn__clear
+                | Очистить

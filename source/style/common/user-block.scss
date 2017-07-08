@@ -134,7 +134,7 @@ input[type="checkbox"] + label::before {
     width: 15px;
     height: 15px;
     text-align: center;
-    background-color: $acsent;
+    background: $white;
 }
 
 .radio + label::before {
@@ -144,9 +144,10 @@ input[type="checkbox"] + label::before {
 
 input[type="checkbox"]:checked + label::before {
   content: "\2713";
+  background-color: $acsent;
 }
 .radio:checked + label::before {
   background-color: $acsent;
-  box-shadow: 0 0 0 5px $white inset;
+  box-shadow: 0 0 0 4px $white inset;
 }
 

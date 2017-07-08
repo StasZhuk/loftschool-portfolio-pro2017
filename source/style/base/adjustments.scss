@@ -60,6 +60,9 @@ button {
     border: none;
     outline: none;
 }
+input {
+    border: 1px solid transparent;
+}
 .heading__main {
     text-transform: uppercase;
     @include sm() {

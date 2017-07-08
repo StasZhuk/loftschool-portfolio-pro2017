@@ -32,6 +32,11 @@
     }
 
 }
+input,
+textarea {
+    border: 2px solid transparent;
+}
+
 input[type="text"],
 input[type="password"],
 textarea {
@@ -81,4 +86,43 @@ input.input--white {
     input {
         margin-right: 5px;
     }
+}
+
+// input:focus:required:valid {
+//     border-color: green;
+// }
+// input:focus:required:invalid {
+//     border-color: red;
+// }
+
+.inputs__wrap {
+    position: relative;
+    span,
+    span::after {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 100;
+        color: white;
+    }
+    span {
+        display: none;
+        top: 100%;
+        padding: 10px 20px;
+        margin-top: 15px;
+        border-radius: 4px;
+        background-color: red;
+        text-align: center;
+        white-space: nowrap;
+    }   
+    span::after {
+        display: block;
+        content: '';
+        bottom: 100%;
+        border: 10px solid transparent;
+        border-bottom-color: red;
+        width: 0;
+        height: 0;
+        margin-top: -5px;
+    }   
 }
