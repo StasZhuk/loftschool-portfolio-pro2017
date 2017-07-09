@@ -61,6 +61,7 @@
 }
 
 .slider__small-preview {
+    position: relative;
     display: flex;
     height: 70%;
     width: 50%;
@@ -162,4 +163,31 @@
 
 .overlay__preview--right {
     background-color: $slider-arrow_up;
+}
+
+.slider__number {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 80px;
+    color: pink;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+
+    &.number--big {
+        font-size: 200px;
+    }
+}   
+
+.slider__image-preview {
+    position: absolute;
+    top: 15%;
+    left: 15%;
+    right: 15%;
+    bottom: 15%;
+    z-index: 2;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }

@@ -57,7 +57,7 @@ module.exports = function() {
             xhr.open('GET', url);
             xhr.send();
             xhr.addEventListener('load', function() {
-                resolve(xhr.response);
+                resolve();
             });
             xhr.addEventListener('error', function() {
                 reject();

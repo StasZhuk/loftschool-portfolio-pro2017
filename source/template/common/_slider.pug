@@ -1,0 +1,27 @@
+.slider
+        .slider__main-preview
+          .main-preview__content
+            .heading__sub-wrap
+              h2.heading__sub
+                | Сайт школы онлайн образования
+            .main-preview__desc
+              | HTML , CSS, JAVASCRIPT
+            .main-preview-btn
+              a(href="#").btn.btn--preview
+                svg.icon
+                  use(xlink:href = '../assets/img/sprite/sprite.svg#link')
+                span
+                  | Посмотреть сайт
+        .slider__small-preview
+
+        .slider__preview-nav
+          .slider__preview-down
+            .overlay__preview.overlay__preview--left
+              a(href="#").arrow__link
+                svg(viewbox="0 0 100 100")
+                  use(xlink:href="../assets/img/sprite/sprite.svg#arrow_down")
+          .slider__preview-up
+            .overlay__preview.overlay__preview--right
+              a(href="#").arrow__link.arrow--up
+                svg(viewbox="0 0 100 100")
+                  use(xlink:href="../assets/img/sprite/sprite.svg#arrow_down")
