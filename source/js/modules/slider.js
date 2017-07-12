@@ -33,12 +33,11 @@ module.exports = function() {
             iconDown: "../assets/img/sprite/sprite.svg#arrow_down",
             iconBtnPreview: "../assets/img/sprite/sprite.svg#link"
         }
-
     ];
     
+    
     var slider1 = document.querySelector(".slider-1");
-    slider(slider1, data1);
-       
+        slider(slider1, data1);
 
 
     function slider(elem, data) {
@@ -54,15 +53,13 @@ module.exports = function() {
 
         slider.classList.add("slider");
         navSlider.classList.add("slider__preview-nav");
-        
-
+    
         slider.appendChild(descrSlider);
         slider.appendChild(mainSlider);
         slider.appendChild(navSlider);
         navSlider.appendChild(downSlider);
         navSlider.appendChild(upSlider);
         
-
         downSlider.addEventListener('click', function(e) {
             e.preventDefault();
             currentSlide = getSlide(currentSlide - 1);
@@ -75,20 +72,26 @@ module.exports = function() {
             fillSlider();
         });
 
+        fillSlider();
+    
+        
+    
+
+
     function fillSlider() {
         var down = getSlide(currentSlide - 1);
         var up = getSlide(currentSlide + 1);
 
         descrSlider.querySelector('.heading__sub').innerText = data1[currentSlide].title;
-        descrSlider.querySelector('.main-preview__desc').innerText = data1[up].tags;
+        descrSlider.querySelector('.main-preview__desc').innerText = data1[currentSlide].tags;
         mainSlider.querySelector('.slider__number').innerText = data1[currentSlide].num;
         upSlider.querySelector('.slider__number').innerText = data1[up].num;
         downSlider.querySelector('.slider__number').innerText = data1[down].num;
         mainSlider.querySelector('.slider__image-preview').style.backgroundImage = 'url(' + data1[currentSlide].image + ')';
         upSlider.querySelector('.slider__image-preview').style.backgroundImage = 'url(' + data1[up].image + ')';
         downSlider.querySelector('.slider__image-preview').style.backgroundImage = 'url(' + data1[down].image + ')';
-
     }
+
 
     function getSlide(value) {
         if(value >= dataLength - 1) {
@@ -101,6 +104,9 @@ module.exports = function() {
             return value;
         }
     }
+    }
+
+
     // Создает элементы навигации, блоки arrowUp, arrowDown
     function createSliderChangeNav(className, classOverlay, classDownOrUp) {
         var navContainer = document.createElement('div');
@@ -110,7 +116,6 @@ module.exports = function() {
         var navSvg = document.createElement('svg');
         var navUse = document.createElement('use');
         var span = document.createElement('span');
-
 
         navContainer.classList.add('slider__preview-' + className);
         navImage.classList.add('slider__image-preview');
@@ -133,7 +138,9 @@ module.exports = function() {
 
         return navContainer;
        }
-    }
+    
+
+
     // Создает элементы блока mainPreview
     function createSliderMainPreview() {
         var mainPreview = document.createElement('div');
@@ -147,7 +154,6 @@ module.exports = function() {
         var previewUse = document.createElement('use');
         var previewSpan = document.createElement('span');
 
-
         mainPreview.classList.add('slider__main-preview');
         previewContent.classList.add('main-preview__content');
         previewHeadingWrap.classList.add('heading__sub-wrap');
@@ -157,12 +163,10 @@ module.exports = function() {
         previewBtnLink.classList.add('btn', 'btn--preview');
         previewSvg.classList.add('icon');
 
-
         previewBtnLink.setAttribute('href', '#');
         previewUse.setAttribute('xlink:href', data1[4].iconBtnPreview);
 
         previewSpan.innerHTML = 'посмотреть сайт';
-
 
         mainPreview.appendChild(previewContent);
         previewContent.appendChild(previewHeadingWrap);
@@ -174,9 +178,9 @@ module.exports = function() {
         previewBtnLink.appendChild(previewSpan);
         previewSvg.appendChild(previewUse);
         
-
         return mainPreview;
        }
+
 
        function createSliderCurrentPreview() {
         var currentPreview = document.createElement('div');
