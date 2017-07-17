@@ -71,7 +71,8 @@ module.exports = function() {
 
         upSlider.addEventListener('click', function(e) {
             e.preventDefault();
-            currentSlide = getSlide(currentSlide + 1);
+            currentSlide.querySelector('.')
+            // currentSlide = getSlide(currentSlide + 1);
             fillSlider();
         });
 
@@ -160,6 +161,7 @@ module.exports = function() {
         previewBtnLink.innerHTML = '<svg class="icon"><use xlink:href="../assets/img/sprite/sprite.svg#link"></use></svg><span>Посмотреть сайт</span>'
 
         previewBtnLink.setAttribute('href', '#');
+        previewBtnLink.setAttribute('target', '_blank');
 
         mainPreview.appendChild(previewContent);
         previewContent.appendChild(previewHeadingWrap);
