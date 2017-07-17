@@ -4,8 +4,9 @@
 .arrow--up {
     width: 26px;
     display: inline-block;
-    transform: rotate(180deg);
+
     svg {
+        transform: rotate(180deg);
         fill: rgba($white, 0.7);
     }
 }

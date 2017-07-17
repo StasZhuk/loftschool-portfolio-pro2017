@@ -66,15 +66,7 @@
     height: 70%;
     width: 50%;
     background-color: $content-right_bg;
-    &::before {
-        content: '';
-        display: block;
-        width: 60%;
-        height: inherit;
-        margin: auto;
-        background: url('../img/slider/work-1.png') no-repeat center;
-        background-size: contain;       
-    }
+
     @include md() {
         box-sizing: content-box;
         height: 100vh;
@@ -107,28 +99,8 @@
     width: 50%;
     height: 100%;
     display: flex;
-    &::before{
-        content: '';
-        display: block;
-        width: 60%;
-        height: 80%;
-        margin: auto;
-        background: transparent no-repeat center;
-        background-size: contain;      
-    }
 }
 
-.slider__preview-down {
-    &::before {
-        background-image: url('../img/slider/work-2.png');
-    }
-}
-
-.slider__preview-up {
-    &::before {
-        background-image: url('../img/slider/work-3.png');      
-    }
-}
 
 .overlay__preview {
     position: absolute;
@@ -139,10 +111,13 @@
     right: 0;
 
     svg {
+        position: relative;
+        z-index: 10;
         width: 46px;
-        height: 26px;
-        fill: $white;
-        filter: drop-shadow(2px 0px 2px rgba(0,0,0,0.16));
+        height: 36px;
+        fill: white;
+        filter: drop-shadow(2px 0px 2px rgba(0,0,0,0.86));
+        // transition: 0.3s all;
     }
     .arrow__link {
         display: flex;
@@ -152,9 +127,25 @@
         height: 100%;
     }
 }
-
 .arrow--up {
-    transform: rotate(180deg);
+    svg {
+        transform: rotate(180deg);
+        transition: 0.3s transform, 0.3s fill;
+    }
+}
+.arrow--down {
+    svg {
+        transition: 0.3s transform, 0.3s fill;
+    }
+}
+
+.arrow--up:hover svg {
+    transform: rotate(180deg) translateY(10px);
+    fill: grey;
+}
+.arrow--down:hover svg {
+    transform: translateY(10px);
+    fill: grey;
 }
 
 .overlay__preview--left {
@@ -185,7 +176,7 @@
     left: 15%;
     right: 15%;
     bottom: 15%;
-    z-index: 2;
+    z-index: 1;
     background-color: transparent;
     background-repeat: no-repeat;
     background-position: center;

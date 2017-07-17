@@ -12,9 +12,9 @@ html
           span.burger__line
       .socials.top
         ul.social__list.list
-          each href, item in {'vk' : '../assets/img/sprite/sprite.svg#vk', 'skype': '../assets/img/sprite/sprite.svg#skype' , 'git': '../assets/img/sprite/sprite.svg#github'}
+          each href, item in {'https://vk.com/staniszhuk' : '../assets/img/sprite/sprite.svg#vk', 'skype:ylitylia': '../assets/img/sprite/sprite.svg#skype' , 'https://github.com/StasZhuk': '../assets/img/sprite/sprite.svg#github'}
             li.list__item.social__list-item
-              a(href='#').list__link.social__list-link
+              a(href= item target="_blank").list__link.social__list-link
                 svg.icon
                   use(xlink:href= href)
 

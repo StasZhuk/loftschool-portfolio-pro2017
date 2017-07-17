@@ -2,33 +2,36 @@ module.exports = function() {
     
     var data1 = [
         {
-            title: "Сайт школы онлайн образования",
+            title: "Barbershop 'Borodinski'",
             image: "../assets/img/slider/work-1.png",
-            description: "Main-preview 1",
+            link: "http://barbershop.zhukstudio.ru/",
             tags: ["js", "html", "css"],
             num: "1"
         },
         {
             title: "100 Days CSS Challenge",
             image: "../assets/img/slider/work-2.png",
-            description: "Main-preview 2",
+            link: "http://100css.zhukstudio.ru/",
             tags: ["css", "html", "animation", "pug"],
             num: "2"
         },
         {
             title: "Дезинфектор N1",
             image: "../assets/img/slider/work-3.png",
-            description: "Main-preview 3",
+            link: "http://desinfector.zhukstudio.ru",
             tags: "one scroll page",
             num: "3"
         },
         {
             title: "Дома и Бани из бревна",
             image: "../assets/img/slider/work-4.png",
-            description: "Main-preview 4",
+            link: "http://stroim.zhukstudio.ru/",
             tags: "landing page",
             num: "4"
-        },
+        }
+    ];
+
+    var data2 = [
         {
             iconDown: "../assets/img/sprite/sprite.svg#arrow_down",
             iconBtnPreview: "../assets/img/sprite/sprite.svg#link"
@@ -37,10 +40,10 @@ module.exports = function() {
     
     
     var slider1 = document.querySelector(".slider-1");
-        slider(slider1, data1);
+        slider(slider1, data1, data2);
 
 
-    function slider(elem, data) {
+    function slider(elem, data, data2) {
         var currentSlide = 0;
         var dataLength = data1.length;
 
@@ -84,6 +87,7 @@ module.exports = function() {
 
         descrSlider.querySelector('.heading__sub').innerText = data1[currentSlide].title;
         descrSlider.querySelector('.main-preview__desc').innerText = data1[currentSlide].tags;
+        descrSlider.querySelector('.btn--preview').setAttribute('href', data1[currentSlide].link);
         mainSlider.querySelector('.slider__number').innerText = data1[currentSlide].num;
         upSlider.querySelector('.slider__number').innerText = data1[up].num;
         downSlider.querySelector('.slider__number').innerText = data1[down].num;
@@ -94,11 +98,11 @@ module.exports = function() {
 
 
     function getSlide(value) {
-        if(value >= dataLength - 1) {
+        if(value >= dataLength) {
             return 0;
         }
         else if(value < 0) {
-            return dataLength - 2;
+            return dataLength - 1;
         }
         else {
             return value;
@@ -113,8 +117,6 @@ module.exports = function() {
         var navImage = document.createElement('div');
         var overlay = document.createElement('div');
         var navLink = document.createElement('a');
-        var navSvg = document.createElement('svg');
-        var navUse = document.createElement('use');
         var span = document.createElement('span');
 
         navContainer.classList.add('slider__preview-' + className);
@@ -126,15 +128,12 @@ module.exports = function() {
         span.classList.add('slider__number');
 
         navLink.setAttribute('href', '#');
-        navSvg.setAttribute('viewbox', '0 0 100 100');
-        navUse.setAttribute('xlink:href', data1[4].iconDown);
+        navLink.innerHTML = '<svg viewbox="0 0 100 100"><use xlink:href="../assets/img/sprite/sprite.svg#arrow_down"></use></svg>';
 
         navContainer.appendChild(overlay);
         navContainer.appendChild(navImage);
-        navContainer.appendChild(span);
+        navLink.appendChild(span);
         overlay.appendChild(navLink);
-        navLink.appendChild(navSvg);
-        navSvg.appendChild(navUse);
 
         return navContainer;
        }
@@ -150,9 +149,6 @@ module.exports = function() {
         var previevDesc = document.createElement('div');
         var previewBtn = document.createElement('div');
         var previewBtnLink = document.createElement('a');
-        var previewSvg = document.createElement('svg');
-        var previewUse = document.createElement('use');
-        var previewSpan = document.createElement('span');
 
         mainPreview.classList.add('slider__main-preview');
         previewContent.classList.add('main-preview__content');
@@ -161,12 +157,9 @@ module.exports = function() {
         previevDesc.classList.add('main-preview__desc');
         previewBtn.classList.add('main-preview-btn');
         previewBtnLink.classList.add('btn', 'btn--preview');
-        previewSvg.classList.add('icon');
+        previewBtnLink.innerHTML = '<svg class="icon"><use xlink:href="../assets/img/sprite/sprite.svg#link"></use></svg><span>Посмотреть сайт</span>'
 
         previewBtnLink.setAttribute('href', '#');
-        previewUse.setAttribute('xlink:href', data1[4].iconBtnPreview);
-
-        previewSpan.innerHTML = 'посмотреть сайт';
 
         mainPreview.appendChild(previewContent);
         previewContent.appendChild(previewHeadingWrap);
@@ -174,9 +167,6 @@ module.exports = function() {
         previewContent.appendChild(previewBtn);
         previewHeadingWrap.appendChild(previewHeading);
         previewBtn.appendChild(previewBtnLink);
-        previewBtnLink.appendChild(previewSvg);
-        previewBtnLink.appendChild(previewSpan);
-        previewSvg.appendChild(previewUse);
         
         return mainPreview;
        }

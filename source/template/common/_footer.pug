@@ -15,24 +15,24 @@ footer(class="footer" + footer_subclass)
                                     a(href= href).nav__list-link.text--medium= title 
                         .socials
                              ul.social__list.list
-                                each href, item in {'vk' : '../assets/img/sprite/sprite.svg#vk', 'skype': '../assets/img/sprite/sprite.svg#skype' , 'git': '../assets/img/sprite/sprite.svg#github'}
+                                each href, item in {'https://vk.com/staniszhuk' : '../assets/img/sprite/sprite.svg#vk', 'skype:ylitylia': '../assets/img/sprite/sprite.svg#skype' , 'https://github.com/StasZhuk': '../assets/img/sprite/sprite.svg#github'}
                                     li.list__item.social__list-item
-                                        a(href='#').list__link.social__list-link
+                                        a(href= item).list__link.social__list-link
                                             svg.icon
                                                 use(xlink:href= href)
                 .col__wrap.col__footer-right
                     .footer__right
                         .footer__link-wrap
-                            a(href="#")
+                            a(href="skype:ylitylia")
                                 | skype_ylitylia
                         .footer__link-wrap
                             a(href="mailto:menistrel2005@yandex.ru")
                                 | menistrel2005@yandex.ru
                         .footer__link-wrap
-                            a(href="tel:+79877897889") 
-                                | +7 987 789 78 89
+                            a(href="tel:+79165719284") 
+                                | +7 916 571 92 84
                         .footer__link-wrap
-                            a(href="#") 
+                            span 
                                 | Москва
     .footer__bottom.bg--blue
         p
