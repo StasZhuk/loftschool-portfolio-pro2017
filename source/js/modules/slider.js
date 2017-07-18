@@ -71,8 +71,7 @@ module.exports = function() {
 
         upSlider.addEventListener('click', function(e) {
             e.preventDefault();
-            currentSlide.querySelector('.')
-            // currentSlide = getSlide(currentSlide + 1);
+            currentSlide = getSlide(currentSlide + 1);
             fillSlider();
         });
 
