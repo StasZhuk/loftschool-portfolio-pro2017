@@ -28,6 +28,13 @@ module.exports = function() {
             link: "http://stroim.zhukstudio.ru/",
             tags: "landing page",
             num: "4"
+        },
+        {
+            title: "Профессиональные курсы по образованию",
+            image: "../assets/img/slider/work-2.png",
+            link: "http://procurs.zhukstudio.ru/",
+            tags: "landing page",
+            num: "5"
         }
     ];
 
