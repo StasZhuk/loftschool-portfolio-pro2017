@@ -9,7 +9,7 @@ module.exports = function() {
             num: "1"
         },
         {
-            title: "100 Days CSS Challenge",
+            title: "100 Days CSS Challenge\n(in progress)",
             image: "../assets/img/slider/work-2.png",
             link: "http://100css.zhukstudio.ru/",
             tags: ["css", "html", "animation", "pug"],
@@ -31,7 +31,7 @@ module.exports = function() {
         },
         {
             title: "Профессиональные курсы по образованию",
-            image: "../assets/img/slider/work-2.png",
+            image: "../assets/img/slider/work-5.png",
             link: "http://procurs.zhukstudio.ru/",
             tags: "landing page",
             num: "5"
