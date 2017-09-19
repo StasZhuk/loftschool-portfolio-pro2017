@@ -55,8 +55,13 @@
 .main-preview__desc {
     color: $acsent;
     margin-bottom: 50px;
+    overflow: hidden;
     @include sm() {
         margin-bottom: 15px;
+    }
+    span {
+        position: relative;
+        top: -50px;
     }
 }
 

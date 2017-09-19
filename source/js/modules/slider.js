@@ -5,14 +5,14 @@ module.exports = function() {
             title: "Barbershop 'Borodinski'",
             image: "../assets/img/slider/work-1.png",
             link: "http://barbershop.zhukstudio.ru/",
-            tags: ["js", "html", "css"],
+            tags: ["js ", "html ", "css "],
             num: "1"
         },
         {
             title: "100 Days CSS Challenge\n(in progress)",
             image: "../assets/img/slider/work-2.png",
             link: "http://100css.zhukstudio.ru/",
-            tags: ["css", "html", "animation", "pug"],
+            tags: ["css ", "html ", "animation ", "pug"],
             num: "2"
         },
         {
@@ -35,6 +35,13 @@ module.exports = function() {
             link: "http://procurs.zhukstudio.ru/",
             tags: "landing page",
             num: "5"
+        },
+        {
+            title: "Компания по финансовым услугам 'Офшоры'",
+            image: "../assets/img/slider/work-6.jpg",
+            link: "http://offshor.zhukstudio.ru/",
+            tags: "сайт",
+            num: "6"
         }
     ];
 
@@ -92,15 +99,51 @@ module.exports = function() {
         var down = getSlide(currentSlide - 1);
         var up = getSlide(currentSlide + 1);
 
-        descrSlider.querySelector('.heading__sub').innerText = data1[currentSlide].title;
-        descrSlider.querySelector('.main-preview__desc').innerText = data1[currentSlide].tags;
+        // descrSlider.querySelector('.heading__sub').innerText = data1[currentSlide].title;
+        animate(descrSlider.querySelector('.heading__sub'), data1[currentSlide].title);
+        animateFall(descrSlider.querySelector('.main-preview__desc'), data1[currentSlide].tags);
         descrSlider.querySelector('.btn--preview').setAttribute('href', data1[currentSlide].link);
+        descrSlider.querySelector('.main-preview-btn').classList.add('btn-animate');
         mainSlider.querySelector('.slider__number').innerText = data1[currentSlide].num;
         upSlider.querySelector('.slider__number').innerText = data1[up].num;
         downSlider.querySelector('.slider__number').innerText = data1[down].num;
         mainSlider.querySelector('.slider__image-preview').style.backgroundImage = 'url(' + data1[currentSlide].image + ')';
         upSlider.querySelector('.slider__image-preview').style.backgroundImage = 'url(' + data1[up].image + ')';
         downSlider.querySelector('.slider__image-preview').style.backgroundImage = 'url(' + data1[down].image + ')';
+    }
+
+    function animate(elemForString, string) {
+        timer = 50;
+        strLength = string.length;
+        elemForString.innerHTML = '';
+
+        for (let i = 0; i < strLength; i++) {
+            let span = document.createElement('span');
+            span.innerText = string[i];
+            
+            setTimeout(function() {
+                elemForString.appendChild(span);
+            }, timer);
+            console.log(timer);
+            timer += 50;
+        }
+    }
+    function animateFall(elemForString, string) {
+        timer = 50;
+        strLength = string.length;
+        elemForString.innerHTML = '';
+
+        for (let i = 0; i < strLength; i++) {
+            let span = document.createElement('span');
+            span.innerText = string[i];
+            
+            setTimeout(function() {
+                span.classList.add('animate');
+                
+            }, timer);
+            elemForString.appendChild(span);
+            timer += 80;
+        }
     }
 
 

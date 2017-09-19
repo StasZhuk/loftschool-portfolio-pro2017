@@ -1,0 +1,45 @@
+.animate {
+    position: relative;
+    top: -50px;
+    animation: textDown 1s ease-in-out running forwards;
+}
+
+// .main-preview-btn {
+//     // opacity: 0;
+//     // transform: scale(0);
+// }
+// .btn-animate {
+//     animation: grow 3s ease-in-out running forwards;
+// }
+
+@keyframes textDown {
+    0% {
+        top: -50px;
+    }
+    100% {
+        top: 0px;
+    }
+}
+// @keyframes grow {
+//     0% {
+//         // opacity: 0; 
+//         transform: rotateX(-50deg);
+//     }
+//     // 20% {
+//     //     // transform: rotateY(30deg);
+//     // }
+//     // 40% {
+//     //     // transform: rotateY(-30deg);
+//     // }
+//     // 60% {
+//     //     // transform: rotateY(-30deg);
+//     // }
+//     // 80% {
+//     //     // transform: rotateY(40deg);
+//     // }
+//     100% {
+//         // opacity: 1;
+//         transform: rotateX(50deg);
+//     }
+// }
+
